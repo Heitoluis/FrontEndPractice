@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <div class="landpage">
+      
+      <div class="hero">
+        <img class="logo" src="/assets/desktop/logo.svg" alt="Pod Logo" />
+        
+        
+        <div class="hero__content">
+          <div class="hero__info">
+            <h1 class="hero__title">
+              <span class="accent-color">Publish your podcasts</span
+              ><br />everywhere.
+            </h1>
+            <p class="hero__body">
+              Upload your audio to Pod with a single click. We’ll then distribute
+              your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+              Casts and more!
+            </p>
+          </div>
+  
+          <div class="podcast_icons">
+            <a class="icon-link"><img class="icon" src="assets/desktop/spotify.svg"></i></a>
+            <a class="icon-link"><img class="icon" src="assets/desktop/apple-podcast.svg"></i></a>
+            <a class="icon-link"><img class="icon" src="assets/desktop/google-podcasts.svg"></i></a>
+            <a class="icon-link"><img class="icon" src="assets/desktop/pocket-casts.svg"></i></a>                    
+          </div>
+  
+          
+          <form class="hero__inputs" action="#" method="POST" novalidate>
+            <input id="email"
+              class="input"
+              type="email"
+              aria-placeholder="Email address"
+              placeholder="Email address" required minlength="8"
+            >
+            <div class="input__msg">
+              <span class="error" aria-live="polite"></span>
+              <span class="success" aria-live="polite"></span>
+            </div>
+
+            <button class="btn" aria-placeholder="Request access" type="submit">
+              Request access
+            </button>
+          </form>
+          
+        </div>
+        
+        
+      </div>
+      <img class="pattern" src="assets/desktop/bg-pattern-dots.svg">
+    </div>
+    <script type="text/javascript" src="js/event.js"></script>
+  </body>
+</html>
