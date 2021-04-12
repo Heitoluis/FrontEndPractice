@@ -353,10 +353,11 @@ Typography (Tablet)
     grid-column: 5;
     margin: 0;
   }
-}
 
-.footer {
-  background-image: url("../assets/tablet/image-footer.jpg");
+  .footer {
+    background-image: url("../assets/tablet/image-footer.jpg");
+    background-position: center;
+  }
 }
 
 /*-----------------
@@ -434,14 +435,14 @@ Hero (Desktop)
   .footer {
     background-image: url("../assets/desktop/image-footer.jpg");
     grid-template-columns:
-      minmax(1em, 0.5fr) minmax(500px, auto) minmax(0, 350px) minmax(
-        400px,
+      minmax(1em, 0.25fr) minmax(450px, auto) minmax(0, 350px) minmax(
+        300px,
         auto
       )
-      minmax(1em, 0.5fr);
+      minmax(1em, 0.25fr);
 
     align-items: center;
-    /* gap: 5em; */
+    padding: 7.5em;
   }
 
   .footer > * {
@@ -463,7 +464,4 @@ Hero (Desktop)
     justify-self: end;
   }
 
-  /* .footer__body {
-    max-width: 500px;
-  } */
 }
