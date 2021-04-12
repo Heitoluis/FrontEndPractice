@@ -301,6 +301,15 @@ Typography (Tablet)
   }
 
   /*-----------------
+    Header (Tablet)
+------------------*/
+
+  .logo {
+    display: block;
+    margin: 4em auto 3em;
+  }
+
+  /*-----------------
     Hero (Tablet)
 ------------------*/
 
@@ -411,10 +420,10 @@ Hero (Desktop)
   }
 
   /*-----------------
-    Main (Tablet)
+    Main (Desktop)
 ------------------*/
 
-  /*---- Images Section (Tablet) ----*/
+  /*---- Images Section (Desktop) ----*/
 
   .section__images {
     grid-template-columns: minmax(1em, 0.5fr) repeat(4, 1fr) minmax(1em, 0.5fr);
