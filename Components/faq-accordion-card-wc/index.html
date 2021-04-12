@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <div class="component grid-container">
+      <div class="canvas">
+        <img
+          class="canvas__img-mobile"
+          src="images/illustration-woman-online-mobile.svg"
+          alt="Illustration of a woman in front of a big screen"
+        />
+
+        <img
+          class="canvas__img-desktop"
+          src="images/illustration-woman-online-desktop.svg"
+          alt="Illustration of a woman in front of a big screen"
+        />
+
+        <div class="faqs">
+          <h2 class="faqs__title">FAQ</h2>
+          <div id="faq" class="faq">
+            <p class="faq__question">How many team members can I invite?</p>
+            <p class="faq__answer">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </div>
+          <div id="faq" class="faq faq-toggle">
+            <p class="faq__question">What is the maximum file upload size?</p>
+            <p class="faq__answer">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </div>
+          <div id="faq" class="faq faq-toggle">
+            <p class="faq__question">How do I reset my password?</p>
+            <p class="faq__answer">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
+          <div id="faq" class="faq faq-toggle">
+            <p class="faq__question">Can I cancel my subscription?</p>
+            <p class="faq__answer">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </div>
+          <div id="faq" class="faq faq-toggle">
+            <p class="faq__question">Do you provide additional support?</p>
+            <p class="faq__answer">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </div>
+        </div>
+
+        <img
+          class="canvas__img__shadow-desktop"
+          src="images/bg-pattern-desktop.svg"
+          alt="Diamond shaped pattern"
+        />
+      </div>
+    </div>
+
+    <script src="js/events.js"></script>
+  </body>
+</html>
