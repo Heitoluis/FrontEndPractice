@@ -123,4 +123,8 @@ body {
 
     /* overflow: hidden; */
   }
+
+  .card__body {
+    margin-bottom: 5em;
+  }
 }
