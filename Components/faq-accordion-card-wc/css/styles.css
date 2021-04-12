@@ -145,7 +145,7 @@ img {
   }
 
   .component {
-    padding: 10em 0;
+    padding: 5em 0;
   }
 
   .canvas {
@@ -190,6 +190,7 @@ img {
   }
 
   .canvas__img__shadow-desktop {
+    display: inline-block;
     position: absolute;
     left: -500px;
     bottom: -150px;
