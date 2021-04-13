@@ -20,11 +20,10 @@ body {
   color: white;
   line-height: 1.6;
 
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-
-  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 
   background-image: url("../images/bg-intro-mobile.png");
   background-color: var(--red);
