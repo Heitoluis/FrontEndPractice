@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <header class="header grid-container">
+      <img class="logo" src="images/logo.svg" alt="Ping logo" />
+      <h1 class="header__title">We are launching <strong>soon!</strong></h1>
+      <p class="header__body">Subscribe and get notified</p>
+    </header>
+    <main class="main grid-container">
+      <form class="form" action="#" method="POST" novalidate>
+        <input
+          id="email"
+          class="input"
+          type="email"
+          aria-label="Email Address"
+          placeholder="Your email address..."
+          required
+        />
+        <p class="error-msg">Please, provide a valid email address</p>
+        <button
+          id="btnNotify"
+          class="button"
+          type="submit"
+          aria-label="Notify Me"
+        >
+          Notify Me
+        </button>
+      </form>
+
+      <img
+        class="hero__img"
+        src="images/illustration-dashboard.png"
+        alt="Dashboard Illustration"
+      />
+    </main>
+
+    <footer class="footer grid-container">
+      <div class="icons">
+        <span class="icon-container">
+          <i class="fab fa-facebook-f"></i>
+        </span>
+
+        <span class="icon-container">
+          <i class="fab fa-twitter"></i>
+        </span>
+
+        <span class="icon-container">
+          <i class="fab fa-instagram"></i>
+        </span>
+      </div>
+      <p class="small-print">© Copyright Ping. All rights reserved.</p>
+    </footer>
+    <script src="js/events.js"></script>
+  </body>
+</html>
