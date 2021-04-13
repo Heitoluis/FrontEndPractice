@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+
+  --pink: #ce9898;
+  --black: #423a3a;
+}
+
+::placeholder {
+  color: var(--pink);
+}
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.875rem;
+  color: var(--pink);
+  text-align: center;
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: right top;
+}
+
+/*-------------------
+    Typography
+--------------------*/
+
+.info__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+  letter-spacing: 7.5px;
+  margin-bottom: 0;
+  line-height: 1.15;
+}
+
+.accent-color {
+  color: var(--pink);
+  font-weight: 300;
+}
+
+.info__body {
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+/*-------------------
+    Layout
+--------------------*/
+
+.hero__logo-desktop {
+  display: none;
+}
+
+.landing-page {
+  background-image: linear-gradient(#ffffff, #fff4f4);
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: minmax(2em, 1fr) minmax(0, 312px) minmax(2em, 1fr);
+}
+
+.header,
+.info {
+  grid-column: 2/-2;
+}
+
+.hero {
+  grid-column: 1 / -1;
+  margin-bottom: 1.5em;
+}
+
+.hero__logo-mobile,
+.hero__logo-desktop {
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
+.hero__logo-mobile {
+  max-height: 250px;
+}
+
+.header {
+  margin: 2em auto 2em 0;
+}
+
+/*----- Form --------*/
+
+.form__inputs {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input,
+.button {
+  border-radius: 30px;
+  padding: 0.875em 1.75em;
+  outline: 0;
+  border: 0;
+}
+
+.input {
+  background-color: transparent;
+  color: inherit;
+  border: 1px var(--pink) solid;
+  width: 100%;
+}
+
+.button {
+  background-image: linear-gradient(to right, #f8bfbf, #ee8b8b);
+  position: absolute;
+  right: 0;
+  /* transition: background 0.25s; */
+}
+
+.error-image {
+  position: absolute;
+  right: 4.75em;
+}
+
+.button:hover,
+.button:focus {
+  background: var(--pink);
+  cursor: pointer;
+}
+
+.button img {
+  display: block;
+  height: 18px;
+  margin-left: 2px;
+}
+
+.msg {
+  display: flex;
+  padding-top: 1em;
+  padding-left: 1.75em;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/*----------------------
+------------------------
+-------  TABLET  -------
+------------------------
+------------------------*/
+
+@media (min-width: 700px) {
+  /*-------------------
+    Typography (Tablet)
+--------------------*/
+
+  .hero__logo-desktop {
+    display: none;
+  }
+
+  .info__title,
+  .info__body {
+    /* font-size: 3rem; */
+    padding-top: 0.25em;
+    text-align: left;
+  }
+
+  .info__body {
+    font-size: 1rem;
+  }
+
+  /*-------------------
+    Layout (Tablet)
+--------------------*/
+
+  .landing-page {
+    padding-bottom: 0;
+  }
+
+  .hero {
+    margin-bottom: 0;
+  }
+
+  .hero__logo-mobile {
+    display: none;
+  }
+
+  .hero__logo-desktop {
+    display: block;
+    max-width: auto;
+  }
+
+  .grid__container {
+    display: grid;
+
+    grid-template-columns:
+      minmax(2em, 1fr) minmax(280px, 400px) minmax(2em, 1fr)
+      360px;
+
+    grid-template-rows: 50px auto;
+
+    grid-template-areas:
+      ". header . hero"
+      ". info . hero";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .info {
+    grid-area: info;
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+}
+
+/*----------------------
+------------------------
+-------  DESKTOP  -------
+------------------------
+------------------------*/
+
+@media (min-width: 1200px) {
+  /*-------------------
+    Typography (Desktop)
+--------------------*/
+  .info__title {
+    font-size: 4rem;
+    padding-top: 1.5em;
+  }
+
+  .info__body {
+    font-size: 1rem;
+    margin-bottom: 2.5em;
+  }
+
+  /*-------------------
+    Layout (Desktop)
+--------------------*/
+
+  .grid__container {
+    display: grid;
+
+    grid-template-columns:
+      minmax(2em, 15em) minmax(350px, 450px) minmax(2em, 15em)
+      minmax(500px, 600px);
+  }
+
+  .header {
+    padding-top: 1em;
+  }
+
+  /*----- Form --------*/
+
+  .input,
+  .button {
+    padding: 1.5em 1.75em;
+  }
+
+  .info__body {
+  }
+
+  .input {
+    background-color: transparent;
+    color: inherit;
+    border: 1px var(--pink) solid;
+    width: 100%;
+  }
+
+  .button {
+    padding-left: 2.875em;
+    padding-right: 2.875em;
+  }
+}

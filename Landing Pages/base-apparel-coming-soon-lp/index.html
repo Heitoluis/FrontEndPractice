@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="landing-page grid__container">
+      <header class="header">
+        <img class="logo" src="images/logo.svg" alt="Base Apparel Logo" />
+      </header>
+      <div class="hero">
+        <img
+          class="hero__logo-mobile"
+          src="images/hero-mobile.jpg"
+          alt="Brunnet young woman with orange shirt"
+        />
+        <img
+          class="hero__logo-desktop"
+          src="images/hero-desktop.jpg"
+          alt="Brunnet young woman with orange shirt"
+        />
+      </div>
+      <div class="info">
+        <h2 class="info__title">
+          <span class="accent-color">We're</span><br />
+          coming <br />soon
+        </h2>
+        <p class="info__body">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <form action="#" method="POST" novalidate>
+          <div class="form__inputs">
+            <input
+              id="email"
+              class="input"
+              type="email"
+              aria-label="Email Address"
+              placeholder="Email Address"
+            />
+            <img class="error-image" src="images/icon-error.svg" alt="error icon" />
+            <button class="button" type="submit" aria-label="Request Access">
+              <img
+                src="images/icon-arrow.svg"
+                alt="arrow pointing right icon"
+              />
+            </button>
+          </div>
+          <div class="msg">
+            <span class="error"></span>
+            <span class="success"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/events.js"></script>
+  </body>
+</html>
