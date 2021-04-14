@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --black: #162542;
+  --gray: #7b8bad;
+  --light-gray: #e8eff2;
+  --orange: #f16718;
+}
+
+/*------------------
+    GENERAL
+-------------------*/
+
+body {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  color: var(--gray);
+  padding-top: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*------------------
+    TYPOGRAPHY
+-------------------*/
+.order-now__title,
+.section__title-bg,
+.section__title {
+  font-weight: 900;
+}
+
+.order-now__title,
+.section__title-bg,
+.section__title {
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.order-now__title {
+  font-size: 3rem;
+}
+
+.section__title-bg {
+  font-size: 2rem;
+}
+
+.section__body {
+  line-height: 1.6;
+}
+
+/*---- Buttons ----*/
+
+.btn {
+  display: inline-block;
+  padding: 0.875em 0.75em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  color: white;
+}
+
+.btn-gray {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+/*------------------
+    GRID CONTAINER
+-------------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 350px) minmax(1em, 1fr);
+}
+
+.header > *,
+.main > *,
+.section > * {
+  grid-column: 2 / -2;
+}
+
+.keyboard-img {
+  grid-column: 1 / -1;
+  margin-bottom: 1em;
+  transform: translateX(1em);
+}
+
+.image-group {
+  grid-column: 1 / -1;
+}
+
+/*------------------
+    LAYOUT
+-------------------*/
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  text-align: center;
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*---- Images ----*/
+
+.keyboard-img,
+.keyboard-glass-img {
+  border-radius: 20px;
+
+  /*  */
+}
+
+.image-group {
+  display: grid;
+  grid-template-columns: minmax(0, 120px) minmax(2em, 1fr) minmax(0, 480px);
+}
+
+.keyboard-iphone-img,
+.keyboard-glass-img {
+  min-height: 220px;
+  max-height: 440px;
+}
+
+.keyboard-iphone-img {
+  grid-column: 1;
+  background-image: url("../assets/mobile/image-phone-and-keyboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.keyboard-iphone-img::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(241, 103, 24, 0.75);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.keyboard-glass-img {
+  grid-column: 3;
+  background-image: url("../assets/mobile/image-glass-and-keyboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  transform: translateX(-1em);
+}
+
+/*---- Icons ----*/
+
+.section__icon-container {
+  margin: 0 auto;
+  background-color: var(--orange);
+  height: 65px;
+  width: 65px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------
+    FOOTER
+-------------------*/
+
+.footer {
+  text-align: center;
+}
+
+.footer > strong {
+  font-weight: 400;
+}
+
+/*-------------------
+---------------------
+------ TABLET -------
+---------------------
+-------------------*/
+
+@media (min-width: 700px) {
+  /*------------------
+    GRID CONTAINER
+-------------------*/
+
+  .grid-container {
+    grid-template-columns: 2em 1fr 1fr 2em;
+
+    grid-template-areas:
+      ". header      header      ."
+      ". order       keyboard    keyboard"
+      ". images      images      ."
+      ". section-bg  section-bg  ."
+      ". compatible  bluetooth   ."
+      ". battery     light       .";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .order-now {
+    grid-area: order;
+  }
+
+  .keyboard-img {
+    grid-area: keyboard;
+  }
+  .image-group {
+    grid-area: images;
+  }
+
+  .section-bg {
+    grid-area: section-bg;
+  }
+
+  .compatible {
+    grid-area: compatible;
+  }
+
+  .bluetooth {
+    grid-area: bluetooth;
+  }
+
+  .battery {
+    grid-area: battery;
+  }
+
+  .light {
+    grid-area: light;
+  }
+
+  /*------------------
+    LAYOUT
+-------------------*/
+
+  .section {
+    text-align: left;
+  }
+
+  .section__icon-container {
+    margin: 0 auto 0 0;
+  }
+
+  .section-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+  }
+
+  .keyboard-iphone-img {
+    background-image: url("../assets/tablet/image-phone-and-keyboard.jpg");
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .keyboard-glass-img {
+    transform: none;
+    content: url("../assets/tablet/image-glass-and-keyboard.jpg");
+  }
+
+  .image-group {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(2em, 1fr) minmax(0, 1000px);
+  }
+}
+
+/*-------------------
+---------------------
+------ DESKTOP-------
+---------------------
+-------------------*/
+
+@media (min-width: 1200px) {
+  /*------------------
+    LAYOUT
+-------------------*/
+
+  .grid-container {
+    grid-template-columns: 2em 1fr 1fr 1fr 1fr 2em;
+
+    grid-template-areas:
+      ". header header  header  header  ."
+      ". order order keyboard keyboard ."
+      ". images images images section-bg ."
+      ". compatible  bluetooth battery light .";
+  }
+
+  .order-now {
+    max-width: 450px;
+  }
+
+  .section {
+    max-width: 250px;
+  }
+
+  .section-bg {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*---- Images ----*/
+  .image-group {
+    max-height: 480px;
+  }
+}
