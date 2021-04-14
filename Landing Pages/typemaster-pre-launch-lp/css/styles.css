@@ -3,10 +3,10 @@
 }
 
 html {
-  --black: #162542;
-  --gray: #7b8bad;
-  --light-gray: #e8eff2;
-  --orange: #f16718;
+  --black: hsl(220, 50%, 17%);
+  --gray: hsl(221, 23%, 58%);
+  --light-gray: hsl(198, 28%, 93%);
+  --orange: hsl(22, 89%, 52%);
 }
 
 /*------------------
@@ -20,8 +20,12 @@ body {
   padding-top: 1em;
 }
 
-img {
+img,
+.keyboard-img,
+.keyboard-iphone-img,
+.keyboard-glass-img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 /*------------------
@@ -31,6 +35,7 @@ img {
 .section__title-bg,
 .section__title {
   font-weight: 900;
+  line-height: 1.1;
 }
 
 .order-now__title,
@@ -42,14 +47,22 @@ img {
 
 .order-now__title {
   font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.order-now__info {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .section__title-bg {
   font-size: 2rem;
 }
 
+.order-now__body,
 .section__body {
   line-height: 1.6;
+  margin-bottom: 1.5em;
 }
 
 /*---- Buttons ----*/
@@ -61,6 +74,7 @@ img {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-orange {
@@ -68,9 +82,18 @@ img {
   color: white;
 }
 
+.btn-orange:hover {
+  background-color: #ff9b62;
+}
+
 .btn-gray {
   background-color: var(--light-gray);
   color: var(--black);
+}
+
+.btn-gray:hover {
+  background-color: #162542;
+  color: white;
 }
 
 /*------------------
@@ -79,12 +102,13 @@ img {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1em minmax(0, 600px) 1em;
+  grid-template-columns: 1.5em minmax(0, 700px) 1.5em;
 }
 
 .header > *,
 .main > *,
-.section > * {
+.section,
+.section-bg > * {
   grid-column: 2 / -2;
 }
 
@@ -94,12 +118,19 @@ img {
 }
 
 .image-group {
-  grid-column: 1 / -1;
+  grid-column: 1 / -2;
 }
 
 /*------------------
     LAYOUT
 -------------------*/
+.pattern {
+  display: none;
+}
+
+.header {
+  margin-bottom: 1em;
+}
 
 .header__content {
   display: flex;
@@ -107,8 +138,22 @@ img {
   align-items: center;
 }
 
+.section-bg,
 .section {
   text-align: center;
+  justify-self: center;
+  margin-bottom: 5em;
+}
+
+.section {
+  max-width: 350px;
+  margin-bottom: 4em;
+}
+
+.order-now {
+  max-width: 330px;
+  margin-right: 2em;
+  margin-bottom: 4em;
 }
 
 .order-info {
@@ -119,22 +164,29 @@ img {
 
 /*---- Images ----*/
 
-.keyboard-img,
-.keyboard-glass-img {
-  border-radius: 20px;
-
-  /*  */
-}
-
 .image-group {
   display: grid;
-  grid-template-columns: minmax(0, 120px) minmax(2em, 1fr) minmax(0, 500px);
+  grid-template-columns: minmax(0, 120px) 1.5em minmax(0, 600px);
+}
+
+.keyboard-img {
+  background-image: url("../assets/mobile/image-keyboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 100%;
+  min-height: 340px;
+  max-height: 520px;
+
+  margin-bottom: 1.5em;
 }
 
 .keyboard-iphone-img,
 .keyboard-glass-img {
-  min-height: 220px;
-  max-height: 440px;
+  min-height: 200px;
+  max-height: 520px;
+  margin-bottom: 3em;
 }
 
 .keyboard-iphone-img {
@@ -145,6 +197,7 @@ img {
   background-position: right;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+
   position: relative;
   overflow: hidden;
 }
@@ -152,7 +205,7 @@ img {
 .keyboard-iphone-img::after {
   content: "";
   position: absolute;
-  background-color: rgba(241, 103, 24, 0.75);
+  background-color: rgba(241, 103, 24, 0.25);
   left: 0;
   right: 0;
   top: 0;
@@ -165,13 +218,13 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-  /* transform: translateX(-1em); */
+  border-radius: 20px;
 }
 
 /*---- Icons ----*/
 
 .section__icon-container {
-  margin: 0 auto;
+  margin: 0 auto 3em;
   background-color: var(--orange);
   height: 65px;
   width: 65px;
@@ -201,11 +254,22 @@ img {
 
 @media (min-width: 700px) {
   /*------------------
-    GRID CONTAINER
+    TYPOGRAPHY TABLET
+-------------------*/
+  .order-now__body {
+    margin-bottom: 2.5em;
+  }
+
+  .section__title {
+    margin-bottom: 0.75em;
+  }
+
+  /*------------------
+    GRID CONTAINER (Tablet)
 -------------------*/
 
   .grid-container {
-    grid-template-columns: 2em 1fr 1fr 2em;
+    grid-template-columns: 2em minmax(0, 600px) minmax(0, 600px) 2em;
 
     grid-template-areas:
       ". header      header      ."
@@ -222,10 +286,12 @@ img {
 
   .order-now {
     grid-area: order;
+    align-self: center;
   }
 
   .keyboard-img {
     grid-area: keyboard;
+    justify-self: end;
   }
   .image-group {
     grid-area: images;
@@ -252,15 +318,29 @@ img {
   }
 
   /*------------------
-    LAYOUT
+    LAYOUT (Tablet)
 -------------------*/
 
+  body {
+    padding-top: 2.5em;
+  }
+
+  .header {
+    margin-bottom: 4em;
+  }
+
+  .main {
+    margin-bottom: 5em;
+  }
+
+  .section-bg,
   .section {
     text-align: left;
   }
 
-  .section__icon-container {
-    margin: 0 auto 0 0;
+  .section {
+    max-width: 280px;
+    margin-bottom: 5em;
   }
 
   .section-bg {
@@ -268,22 +348,51 @@ img {
     justify-content: space-between;
     align-items: center;
     gap: 3em;
+    margin-bottom: 7.5em;
+  }
+
+  .section__body {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /*-- Images --*/
+
+  .image-group {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) 2em minmax(0, 1000px);
+  }
+
+  .keyboard-iphone-img,
+  .keyboard-glass-img {
+    min-height: 300px;
+    max-height: 520px;
+    margin-bottom: 3em;
+  }
+
+  .keyboard-img {
+    background-image: url("../assets/tablet/image-keyboard.jpg");
+
+    min-height: 400px;
+    max-height: 600px;
+
+    width: calc(100% - 2em);
+    margin-bottom: 2em;
   }
 
   .keyboard-iphone-img {
     background-image: url("../assets/tablet/image-phone-and-keyboard.jpg");
-    background-size: cover;
     border-radius: 20px;
   }
 
   .keyboard-glass-img {
-    transform: none;
-    content: url("../assets/tablet/image-glass-and-keyboard.jpg");
+    background-image: url("../assets/tablet/image-glass-and-keyboard.jpg");
   }
 
-  .image-group {
-    display: grid;
-    grid-template-columns: minmax(0, 200px) minmax(2em, 1fr) minmax(0, 1000px);
+  /*-- Icons --*/
+
+  .section__icon-container {
+    margin: 0 auto 2.5em 0;
   }
 }
 
@@ -293,18 +402,18 @@ img {
 ---------------------
 -------------------*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   /*------------------
     LAYOUT
 -------------------*/
 
   .grid-container {
-    grid-template-columns: 2em 1fr 1fr 1fr 1fr 2em;
+    grid-template-columns: minmax(2em, 1fr) repeat(4, 275px) minmax(2em, 1fr);
 
     grid-template-areas:
       ". header header  header  header  ."
-      ". order order keyboard keyboard ."
-      ". images images images section-bg ."
+      ". order order keyboard keyboard right-pat"
+      "left-pat images images images section-bg ."
       ". compatible  bluetooth battery light .";
   }
 
@@ -313,17 +422,63 @@ img {
   }
 
   .section {
-    max-width: 250px;
+    padding-right: 2em;
+    margin-top: 10em;
+    margin-bottom: 2em;
   }
 
   .section-bg {
+    max-width: 280px;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
+    align-self: center;
+    gap: 0;
+    margin-bottom: 0;
   }
 
   /*---- Images ----*/
-  .image-group {
-    max-height: 480px;
+
+  .keyboard-iphone-img,
+  .keyboard-glass-img {
+    min-height: 350px;
+    max-height: 450px;
+    margin-bottom: 0;
+  }
+
+  .keyboard-img {
+    background-image: url("../assets/desktop/image-keyboard.jpg");
+    /* margin-right: -5em; */
+  }
+
+  .keyboard-iphone-img {
+    background-image: url("../assets/desktop/image-phone-and-keyboard.jpg");
+  }
+
+  .keyboard-glass-img {
+    content: url("../assets/desktop/image-glass-and-keyboard.jpg");
+  }
+
+  .pattern {
+    display: block;
+    height: 50%;
+
+    background-color: var(--light-gray);
+  }
+
+  .pattern-left {
+    grid-area: left-pat;
+    align-self: end;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-right: 2em;
+  }
+
+  .pattern-right {
+    grid-area: right-pat;
+    align-self: start;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-left: 2em;
   }
 }
