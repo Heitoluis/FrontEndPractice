@@ -79,7 +79,7 @@ img {
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(1em, 1fr) minmax(0, 350px) minmax(1em, 1fr);
+  grid-template-columns: 1em minmax(0, 600px) 1em;
 }
 
 .header > *,
@@ -89,9 +89,8 @@ img {
 }
 
 .keyboard-img {
-  grid-column: 1 / -1;
+  grid-column: 2 / -1;
   margin-bottom: 1em;
-  transform: translateX(1em);
 }
 
 .image-group {
@@ -129,7 +128,7 @@ img {
 
 .image-group {
   display: grid;
-  grid-template-columns: minmax(0, 120px) minmax(2em, 1fr) minmax(0, 480px);
+  grid-template-columns: minmax(0, 120px) minmax(2em, 1fr) minmax(0, 500px);
 }
 
 .keyboard-iphone-img,
@@ -166,7 +165,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-  transform: translateX(-1em);
+  /* transform: translateX(-1em); */
 }
 
 /*---- Icons ----*/
