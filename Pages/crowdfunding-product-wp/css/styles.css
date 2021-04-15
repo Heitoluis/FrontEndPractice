@@ -1,0 +1,620 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --gray: #7a7a7a;
+  --light-gray: #b1b1b1;
+  --lightest-gray: #f2f2f2;
+  --green: #3cb3ab;
+}
+
+body {
+  margin: 0;
+  font-family: "Commissioner", sans-serif;
+  background-color: var(--lightest-gray);
+  color: var(--gray);
+}
+
+img {
+  max-width: 100%;
+}
+
+/*------------------
+TYPOGRAPHY
+-------------------*/
+
+h1,
+h2,
+h3,
+strong {
+  color: black;
+  font-weight: 700;
+}
+
+strong {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+h3,
+p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/*------------------
+BUTTONS
+-------------------*/
+
+.top__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn,
+.btn-small {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 30px;
+  position: relative;
+  white-space: nowrap;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.btn-small {
+  font-size: 0.875rem;
+}
+
+.btn-green {
+  background-color: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #147a73;
+  border-color: #147a73;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border-color: var(--gray);
+  color: black;
+}
+
+.btn-gray {
+  /* background-color: var(--light-gray);
+  color: var(--gray); */
+  padding-left: 0;
+  padding-right: 0;
+  content: "";
+}
+
+.btn-gray {
+  display: none;
+}
+
+.bookmark__icon {
+  object-fit: cover;
+  height: 50px;
+  /* position: absolute; */
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.bookmark__icon:hover {
+  opacity: 50%;
+}
+
+/*------------------
+GRID CONTAINER
+-------------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 500px) minmax(1em, 1fr);
+}
+
+.header > *,
+.main > *,
+.backing > * {
+  grid-column: 2 / -2;
+}
+
+/*------------------
+GENERAL
+-------------------*/
+
+.top-area,
+.backing,
+.about-area,
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2.5em 2.5em 2.5em 2.5em;
+}
+
+.top-area,
+.backing {
+  text-align: center;
+}
+
+.out-of-stock {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.display-modal {
+  display: block !important;
+}
+
+.display-payment {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.selected {
+  border: 2px var(--green) solid !important;
+}
+
+/*------------------
+HEADER
+-------------------*/
+
+.header {
+  background-image: url("../images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 300px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2em;
+}
+
+/*------------------
+TOP AREA
+-------------------*/
+
+.top-area {
+  transform: translateY(-25%);
+}
+
+.logo_mastercraft {
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+/*------------------
+BACKING AREA
+-------------------*/
+
+.backing {
+  margin-bottom: 2em;
+}
+
+.metrics {
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.metrics::after {
+  content: "";
+  border-bottom: 1px var(--gray) solid;
+  position: absolute;
+  bottom: -1em;
+  width: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.no-underline::after {
+  display: none;
+}
+
+.metric-bar {
+  width: 100%;
+  background: var(--light-gray);
+  height: 10px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 25%;
+  top: 0;
+  bottom: 0;
+  background-color: var(--green);
+}
+
+.metric__value,
+.metric__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*------------------
+ABOUT AREA
+-------------------*/
+
+.about-area {
+  text-align: left;
+}
+
+/*------------------
+STANDS
+-------------------*/
+
+.stand,
+.pledge {
+  border: 1px var(--light-gray) solid;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.stand__title,
+.stand__pledge {
+  margin: 0;
+}
+
+.pledge__amount,
+.stand__pledge {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.stand__left {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/*------------------
+BACKUP MODALS
+-------------------*/
+
+.modal {
+  position: fixed;
+  left: 2em;
+  right: 2em;
+  bottom: 2em;
+  top: 2em;
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
+.backup-modal {
+  display: none;
+  overflow-y: scroll;
+}
+
+.pledge__selection {
+  display: grid;
+  grid-template-columns: 1em 1em auto;
+  grid-template-areas:
+    "radio . title"
+    "radio . description";
+}
+
+.radio,
+.pledge__title,
+.pledge__amount {
+  margin: 0;
+}
+
+.radio {
+  grid-area: radio;
+  align-self: center;
+}
+.pledge__title {
+  grid-area: title;
+  align-self: end;
+}
+.pledge__amount {
+  grid-area: description;
+  align-self: start;
+}
+
+.pledge__payment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+}
+
+.pledge__payment > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.payment__title {
+  width: 100%;
+  text-align: center;
+}
+
+.pledge__payment > .btn-transparent {
+  width: 40%;
+}
+
+.pledge__payment > .btn-green {
+  width: 55%;
+}
+
+.close-icon {
+  position: absolute;
+  top: 2.25em;
+  right: 1em;
+}
+
+/*------------------
+BACKUP GRATITUDE
+-------------------*/
+
+.sucess-modal {
+  display: none;
+  width: 320px;
+  height: 320px;
+  margin: auto;
+}
+
+.success-modal__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  /*------------------
+TYPOGRAPHY
+-------------------*/
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /*------------------
+BUTTONS
+-------------------*/
+
+  .btn-gray {
+    display: block;
+    background-color: var(--light-gray);
+    color: var(--gray);
+    padding: 0;
+    padding-right: 1.5em;
+    border: 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  .bookmark__icon {
+    margin-left: 0;
+    margin-right: 1em;
+  }
+
+  .btn-bookmark {
+    display: none;
+  }
+
+  /*------------------
+GRID CONTAINER (Desktop)
+-------------------*/
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0, 750px) minmax(1em, 1fr);
+  }
+
+  .header > * {
+    grid-column: 1 / -1;
+  }
+
+  /*------------------
+GENERAL (Desktop)
+-------------------*/
+
+  .backing {
+    text-align: left;
+  }
+
+  /*------------------
+HEADER (Desktop)
+-------------------*/
+
+  .header {
+    background-image: url("../images/image-hero-desktop.jpg");
+  }
+
+  .header__content {
+    max-width: 1200px;
+    padding-left: 2em;
+    padding-right: 2em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /*------------------
+TOP AREA
+-------------------*/
+
+  .top__buttons {
+    justify-content: space-between;
+  }
+
+  /*------------------
+BACKING AREA (Desktop)
+-------------------*/
+
+  .backing__metrics {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .metrics {
+    padding-right: 3em;
+  }
+
+  .metrics + .metrics {
+    margin-left: 3em;
+  }
+
+  .metrics::after {
+    content: "";
+    border-bottom: 0;
+    border-right: 1px var(--gray) solid;
+
+    bottom: initial;
+    left: initial;
+    transform: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /*------------------
+STANDS (Desktop)
+-------------------*/
+
+  .stand {
+    display: grid;
+
+    grid-template-areas:
+      "title . pledge"
+      "body body body"
+      "left . btn";
+    align-items: center;
+  }
+
+  .stand__title {
+    grid-area: title;
+  }
+  .stand__pledge {
+    grid-area: pledge;
+  }
+  .stand__body {
+    grid-area: body;
+  }
+  .stand__left {
+    grid-area: left;
+    align-self: end;
+    margin-bottom: 0;
+  }
+  .stand > .btn-small {
+    grid-area: btn;
+    align-self: end;
+  }
+
+  /*------------------
+PLEDGES (Desktop)
+-------------------*/
+
+  .pledge__selection {
+    grid-template-columns: 2em auto auto;
+    grid-template-areas: initial;
+  }
+
+  .pledge__selection > * {
+    grid-column: initial;
+  }
+
+  .pledge {
+    display: grid;
+
+    grid-template-areas:
+      "pledge left"
+      "body body"
+      "payment payment";
+
+    align-items: center;
+  }
+
+  .pledge__selection {
+    grid-area: pledge;
+  }
+  .pledge__body {
+    grid-area: body;
+  }
+  .pledge__left {
+    grid-area: left;
+    justify-self: end;
+  }
+
+  .pledge__payment {
+    grid-area: payment;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .payment__title {
+    text-align: left;
+  }
+
+  .pledge__payment > .btn-small {
+    width: 25%;
+  }
+
+  .pledge__payment > .btn-transparent {
+    margin-right: 1em;
+  }
+
+  .modal {
+    padding: 2.5em;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .close-icon {
+    top: 2em;
+    right: 2em;
+  }
+
+  .sucess-modal {
+    display: none;
+    width: 540px;
+    height: 380px;
+    margin: auto;
+  }
+}
