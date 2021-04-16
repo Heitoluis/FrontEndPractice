@@ -62,7 +62,7 @@ img {
 ------------------------*/
 
 .component {
-  padding: 5em 2em;
+  padding: 0 2em;
   /* background-image: url("../images/bg-mobile.png"); */
   background-position: center;
   background-size: cover;
