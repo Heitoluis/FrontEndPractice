@@ -96,6 +96,7 @@ LAYOUT
 .hero__img {
   min-height: 240px;
   background-image: url("../images/image-header-mobile.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
