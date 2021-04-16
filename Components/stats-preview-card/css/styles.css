@@ -87,6 +87,10 @@ LAYOUT
 
 .component {
   background-color: var(--dark-purple);
+  margin: 4em 2em;
+  padding-bottom: 1em;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .hero__img {
@@ -95,6 +99,7 @@ LAYOUT
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-bottom: 1em;
 }
 
 .hero__img::after {
@@ -115,8 +120,8 @@ LAYOUT
   z-index: 0;
 }
 
-.component__info {
-  padding: 0em 1.75em;
+.component__body {
+  margin-bottom: 2em;
 }
 
 @media (min-width: 900px) {
@@ -127,8 +132,8 @@ GRID CONTAINER
   .grid-container {
     display: grid;
     grid-template-columns:
-      minmax(1em, 1fr) minmax(264px, 440px) minmax(2em, 1fr)
-      minmax(264px, 540px);
+      minmax(1em, 1fr) minmax(264px, 400px) minmax(2em, 1fr)
+      minmax(264px, 520px);
   }
 
   .component__info {
@@ -156,24 +161,27 @@ LAYOUT
   .component {
     max-width: 1110px;
     margin: 0 auto;
+    padding-bottom: 0;
   }
 
   .hero__img {
-    height: 446px;
-    height: 446px;
+    height: 420px;
+
+    margin-bottom: 0;
   }
-}
 
-.component__info {
-  text-align: left;
-}
+  .component__info {
+    text-align: left;
+  }
 
-.component__body {
-  margin-bottom: 3em;
-}
+  .component__body {
+    margin-bottom: 3em;
+  }
 
-.metrics {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .metrics {
+    max-width: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
