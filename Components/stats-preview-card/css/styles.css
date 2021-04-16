@@ -71,7 +71,7 @@ GRID CONTAINER
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(1em, 1fr) minmax(264px, 480px) minmax(1em, 1fr);
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 480px) minmax(1em, 1fr);
 }
 
 .hero__img {
