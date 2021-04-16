@@ -133,7 +133,7 @@ GRID CONTAINER
   .grid-container {
     display: grid;
     grid-template-columns:
-      minmax(1em, 1fr) minmax(264px, 400px) minmax(2em, 1fr)
+      minmax(4em, 1fr) minmax(264px, 400px) minmax(4em, 1fr)
       minmax(264px, 520px);
   }
 
@@ -160,7 +160,7 @@ LAYOUT
 -----------------*/
 
   .component {
-    max-width: 1110px;
+    max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 0;
   }
