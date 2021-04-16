@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --purple: #ab5cdb;
+  --purple-transparent: rgba(171, 92, 219, 0.5);
+  --dark-purple: #1b1937;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*----------------
+TIPOGRAPHY
+-----------------*/
+p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.component__title {
+  font-size: 1.75rem;
+}
+
+.color-accent {
+  color: var(--purple);
+}
+
+.component__body {
+  font-size: 0.9375;
+  opacity: 75%;
+}
+
+.metric__title,
+.metric__description {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+}
+
+.metric__title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.metric__description {
+  font-size: 0.75rem;
+  margin-top: 0.5em;
+  opacity: 60%;
+}
+
+/*----------------
+GRID CONTAINER
+-----------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(264px, 480px) minmax(1em, 1fr);
+}
+
+.hero__img {
+  grid-column: 1 / -1;
+}
+
+.component__info {
+  grid-column: 2 / -2;
+}
+/*----------------
+LAYOUT
+-----------------*/
+
+.component {
+  background-color: var(--dark-purple);
+}
+
+.hero__img {
+  min-height: 240px;
+  background-image: url("../images/image-header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero__img::after {
+  position: absolute;
+  content: "";
+  background-color: var(--purple);
+  opacity: 0.5;
+  filter: brightness(75%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.hero-img__container {
+  background-color: var(--purple);
+  position: relative;
+  z-index: 0;
+}
+
+.component__info {
+  padding: 0em 1.75em;
+}
+
+@media (min-width: 900px) {
+  /*----------------
+GRID CONTAINER
+-----------------*/
+
+  .grid-container {
+    display: grid;
+    grid-template-columns:
+      minmax(1em, 1fr) minmax(264px, 440px) minmax(2em, 1fr)
+      minmax(264px, 540px);
+  }
+
+  .component__info {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .hero__img {
+    grid-column: 4;
+  }
+
+  /*----------------
+TIPOGRAPHY
+-----------------*/
+
+  .component__title {
+    font-size: 2.25rem;
+  }
+
+  /*----------------
+LAYOUT
+-----------------*/
+
+  .component {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .hero__img {
+    height: 446px;
+    height: 446px;
+  }
+}
+
+.component__info {
+  text-align: left;
+}
+
+.component__body {
+  margin-bottom: 3em;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
