@@ -395,6 +395,7 @@ HEADER
 
   .hero__info {
     max-width: 580px;
+    margin-bottom: 0;
     width: 50%;
   }
 
