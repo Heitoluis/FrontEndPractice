@@ -12,14 +12,17 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
   </head>
   <body>
-    <div class="component">
-      <div class="testimonee-image-area grid-container">
+    <div class="component grid-container">
+      <div class="testimonee-image-area">
         <img
           class="testimonee-image display"
           src="images/image-tanya.jpg"
@@ -31,17 +34,19 @@
           alt="Smiling bearded young man"
         />
         <div class="slider__butons">
-          <a class="btn btn-left"
+          <a id="btn-left" class="btn btn-left"
             ><img src="images/icon-prev.svg" alt="arrow pointing left"
           /></a>
           <a class="btn btn-right"
-            ><img src="images/icon-next.svg" alt="arrow pointing right"
+            ><img
+              id="btn-right"
+              src="images/icon-next.svg"
+              alt="arrow pointing right"
           /></a>
         </div>
       </div>
 
-      
-      <div class="testimonial-area grid-container">
+      <div class="testimonial-area">
         <div class="testimonial_container display">
           <p class="testimonial">
             “ I’ve been interested in coding for a while but never taken the
@@ -56,10 +61,10 @@
 
         <div class="testimonial_container">
           <p class="testimonial">
-            “ If you want to lay the best foundation possible
-      I’d recommend taking this course. The depth the instructors go into is
-      incredible. I now feel so confident about starting up as a professional
-      developer. ”
+            “ If you want to lay the best foundation possible I’d recommend
+            taking this course. The depth the instructors go into is incredible.
+            I now feel so confident about starting up as a professional
+            developer. ”
           </p>
           <div class="testimonee-info">
             <p class="testimonee__name"><strong>John Tarkpor</strong></p>
@@ -67,11 +72,8 @@
           </div>
         </div>
       </div>
-
-      
-    </div>
     </div>
 
-        
+    <script src="js/slide.js"></script>
   </body>
 </html>
