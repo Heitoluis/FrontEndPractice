@@ -123,7 +123,6 @@ BUTTONS
   position: relative;
 }
 
-
 /*------------------
 GRID CONTAINER
 -------------------*/
@@ -150,6 +149,13 @@ GENERAL
   background-color: white;
   border-radius: 5px;
   padding: 0 2em 2.5em 2em;
+}
+
+@media (max-width: 320px) {
+  .top-area {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 .top-area,
@@ -478,6 +484,12 @@ BACKUP GRATITUDE
   align-items: center;
 }
 
+/*-------------------
+---------------------
+-----DESKTOP------
+---------------------
+--------------------*/
+
 @media (min-width: 800px) {
   /*------------------
 TYPOGRAPHY
@@ -770,5 +782,7 @@ PLEDGES (Desktop)
     width: 540px;
     height: 380px;
     margin: auto;
+    transform: none;
+    left: 0;
   }
 }
