@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --black: #202047;
+  --gray: #b9b9ce;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #202047;
+  text-align: center;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*-----------------
+TYPOGRAPHY
+------------------*/
+
+.testimonial {
+  font-size: 1.125rem;
+}
+
+.testimonee__name,
+.testimonee__role {
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.testimonee__role {
+  color: var(--gray);
+}
+
+/*-----------------
+GRID CONTAINER
+------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(2em, 1fr) minmax(0, 450px) minmax(2em, 1fr);
+}
+
+.testimonee-image-area > *,
+.testimonial-area > * {
+  grid-column: 2 / -2;
+}
+
+/*-----------------
+LAYOUT
+------------------*/
+
+.component {
+  padding: 0em 0em 7em;
+  background-image: url('../images/pattern-curve.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.testimonial_container,
+.testimonee-image {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.testimonee-image-area {
+  background-image: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 87.5%;
+  max-width: 475px;
+  margin: 0 auto;
+  padding: 4em 2em;
+}
+
+.testimonee-image {
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+.testimonee-image-area {
+  position: relative;
+  /* margin-bottom: 3em; */
+}
+
+.slider__butons {
+  position: absolute;
+  background-color: white;
+  padding: 0.75em 1em;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  left: 50%;
+  bottom: 4em;
+  border-radius: 25px;
+  transform: translate(-50%, 50%);
+}
+
+.btn + .btn {
+  margin-left: 1.5em;
+}
