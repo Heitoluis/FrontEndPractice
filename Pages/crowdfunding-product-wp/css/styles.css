@@ -47,7 +47,7 @@ h2 {
 h3,
 p {
   font-size: 0.875rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /*------------------
@@ -70,6 +70,7 @@ BUTTONS
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .btn-small {
@@ -93,29 +94,35 @@ BUTTONS
   color: black;
 }
 
-.btn-gray {
-  /* background-color: var(--light-gray);
-  color: var(--gray); */
-  padding-left: 0;
-  padding-right: 0;
-  content: "";
-}
-
-.btn-gray {
-  display: none;
-}
-
-.bookmark__icon {
-  object-fit: cover;
-  height: 50px;
-  /* position: absolute; */
-  margin-left: 0.5em;
+.btn-bookmark {
+  display: block;
+  background-image: url("../images/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-color: var(--light-gray);
+  border-radius: 30px;
+  margin-left: 1em;
   cursor: pointer;
 }
 
-.bookmark__icon:hover {
-  opacity: 50%;
+.btn-bookmark-size {
+  background-size: cover;
+  padding-left: 0;
+  padding-right: 0;
+  height: 3.125em;
+  width: 3.125em;
 }
+
+.bookmark__body {
+  display: none;
+}
+
+.bookmarked {
+  background-image: url("../images/icon-bookmarked.svg");
+  background-color: var(--lightest-gray);
+  color: var(--green);
+  position: relative;
+}
+
 
 /*------------------
 GRID CONTAINER
@@ -142,7 +149,7 @@ GENERAL
 .modal {
   background-color: white;
   border-radius: 5px;
-  padding: 2.5em 2.5em 2.5em 2.5em;
+  padding: 0 2em 2.5em 2em;
 }
 
 .top-area,
@@ -160,8 +167,10 @@ GENERAL
 }
 
 .display-payment {
+  border-top: 1px solid var(--light-gray) !important;
   height: auto !important;
   overflow: visible !important;
+  margin-top: 1.5em !important;
 }
 
 .selected {
@@ -193,7 +202,13 @@ TOP AREA
 -------------------*/
 
 .top-area {
-  transform: translateY(-25%);
+  transform: translateY(-20%);
+  margin-bottom: -1.5em;
+}
+
+.top__title {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .logo_mastercraft {
@@ -211,16 +226,18 @@ BACKING AREA
 }
 
 .metrics {
+  margin-top: 1em;
   margin-bottom: 2em;
+  padding-top: 0.75em;
   position: relative;
 }
 
 .metrics::after {
   content: "";
-  border-bottom: 1px var(--gray) solid;
+  border-bottom: 2px var(--light-gray) solid;
   position: absolute;
-  bottom: -1em;
-  width: 20%;
+  bottom: -1.5em;
+  width: 30%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -231,8 +248,8 @@ BACKING AREA
 
 .metric-bar {
   width: 100%;
-  background: var(--light-gray);
-  height: 10px;
+  background: var(--lightest-gray);
+  height: 12px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -245,15 +262,19 @@ BACKING AREA
   right: 25%;
   top: 0;
   bottom: 0;
+  border-radius: 20px;
   background-color: var(--green);
 }
 
-.metric__value,
-.metric__description {
+.metric__value {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 0;
   padding-bottom: 0;
+}
+
+.metric__description {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /*------------------
@@ -262,6 +283,15 @@ ABOUT AREA
 
 .about-area {
   text-align: left;
+  padding-top: 1.5em;
+}
+
+.about__title {
+  margin-bottom: 1.5em;
+}
+
+.about__body {
+  margin-bottom: 3em;
 }
 
 /*------------------
@@ -271,14 +301,19 @@ STANDS
 .stand,
 .pledge {
   border: 1px var(--light-gray) solid;
-  margin-bottom: 2em;
+
   border-radius: 10px;
-  padding: 1em;
+  padding: 1.375em 1.25em;
+  margin-bottom: 1.5em;
 }
 
 .stand__title,
 .stand__pledge {
   margin: 0;
+}
+
+.stand__pledge {
+  margin-bottom: 2em;
 }
 
 .pledge__amount,
@@ -299,12 +334,13 @@ BACKUP MODALS
 
 .modal {
   position: fixed;
-  left: 2em;
-  right: 2em;
+  left: 1em;
+  right: 1em;
   bottom: 2em;
   top: 2em;
   box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.5);
-  padding: 1em;
+  border-radius: 10px;
+  padding: 1em 2em;
 }
 
 .backup-modal {
@@ -312,12 +348,38 @@ BACKUP MODALS
   overflow-y: scroll;
 }
 
+.backup-modal__title,
+.backup-modal__body {
+  margin-bottom: 1.5em;
+}
+
+.radio {
+  width: 25px;
+  height: 25px;
+  border-color: var(--lightest-gray);
+  background-color: var(--lightest-gray);
+}
+
+.backup-modal strong {
+  font-size: 1.125rem;
+  margin-right: 0.25em;
+}
+
+.pledge {
+  padding-bottom: 2em;
+}
+
 .pledge__selection {
   display: grid;
-  grid-template-columns: 1em 1em auto;
+  grid-template-columns: 1.5em 1em auto;
   grid-template-areas:
     "radio . title"
     "radio . description";
+  margin-bottom: 1.25em;
+}
+
+.pledge__left {
+  margin-bottom: 0em;
 }
 
 .radio,
@@ -333,7 +395,15 @@ BACKUP MODALS
 .pledge__title {
   grid-area: title;
   align-self: end;
+  justify-self: start;
+  margin-right: 0.75em;
 }
+
+.pledge__title:hover {
+  cursor: pointer;
+  color: var(--green);
+}
+
 .pledge__amount {
   grid-area: description;
   align-self: start;
@@ -347,16 +417,27 @@ BACKUP MODALS
   text-align: center;
   height: 0;
   overflow: hidden;
+  margin-left: -2.5em;
+  transform: translateX(1.25em);
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .pledge__payment > * {
   padding-left: 0;
   padding-right: 0;
+  padding-top: 1em;
+}
+
+.no-reward {
+  margin-top: 2em;
+  margin-bottom: 0em;
 }
 
 .payment__title {
   width: 100%;
   text-align: center;
+  margin-bottom: 1.5em;
 }
 
 .pledge__payment > .btn-transparent {
@@ -371,17 +452,22 @@ BACKUP MODALS
   position: absolute;
   top: 2.25em;
   right: 1em;
+  cursor: pointer;
 }
 
 /*------------------
 BACKUP GRATITUDE
 -------------------*/
 
-.sucess-modal {
+.success-modal {
   display: none;
+
   width: 320px;
   height: 320px;
-  margin: auto;
+
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
 }
 
 .success-modal__content {
@@ -429,13 +515,20 @@ BUTTONS
     align-items: center;
   }
 
-  .bookmark__icon {
-    margin-left: 0;
-    margin-right: 1em;
+  .bookmark__body {
+    display: inline-block;
   }
 
-  .btn-bookmark {
-    display: none;
+  .btn-bookmark-size {
+    background-size: 3.125rem;
+    padding-left: 4em;
+    padding-right: 6em;
+    display: flex;
+    align-items: center;
+  }
+
+  .bookmarked {
+    padding-right: 7em;
   }
 
   /*------------------
@@ -459,6 +552,20 @@ GENERAL (Desktop)
     text-align: left;
   }
 
+  .top-area,
+  .backing,
+  .about-area,
+  .modal {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .display-payment {
+    margin-top: 1em !important;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em !important;
+  }
+
   /*------------------
 HEADER (Desktop)
 -------------------*/
@@ -480,8 +587,24 @@ HEADER (Desktop)
 TOP AREA
 -------------------*/
 
+  .top-area {
+    transform: translateY(-35%);
+    margin-bottom: -4em;
+  }
+
   .top__buttons {
     justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  .top__title {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .top__body {
+    margin-top: 0.75em;
+    margin-bottom: 2.5em;
   }
 
   /*------------------
@@ -495,6 +618,7 @@ BACKING AREA (Desktop)
 
   .metrics {
     padding-right: 3em;
+    margin-bottom: 1em;
   }
 
   .metrics + .metrics {
@@ -509,9 +633,17 @@ BACKING AREA (Desktop)
     bottom: initial;
     left: initial;
     transform: none;
-    top: 0;
-    bottom: 0;
+    top: 1.5em;
+    bottom: 1.5em;
     right: 0;
+  }
+
+  /*------------------
+ABOUT AREA
+-------------------*/
+
+  .about-area {
+    padding-top: 2.5em;
   }
 
   /*------------------
@@ -519,6 +651,7 @@ STANDS (Desktop)
 -------------------*/
 
   .stand {
+    padding: 2.5em;
     display: grid;
 
     grid-template-areas:
@@ -533,6 +666,7 @@ STANDS (Desktop)
   }
   .stand__pledge {
     grid-area: pledge;
+    margin-bottom: 0;
   }
   .stand__body {
     grid-area: body;
@@ -552,7 +686,7 @@ PLEDGES (Desktop)
 -------------------*/
 
   .pledge__selection {
-    grid-template-columns: 2em auto auto;
+    grid-template-columns: 3em auto auto;
     grid-template-areas: initial;
   }
 
@@ -561,8 +695,11 @@ PLEDGES (Desktop)
   }
 
   .pledge {
+    padding: 2.5em;
+    padding-bottom: 1.5em;
     display: grid;
 
+    grid-template-columns: 1fr 6em;
     grid-template-areas:
       "pledge left"
       "body body"
@@ -573,6 +710,7 @@ PLEDGES (Desktop)
 
   .pledge__selection {
     grid-area: pledge;
+    justify-self: left;
   }
   .pledge__body {
     grid-area: body;
@@ -580,24 +718,40 @@ PLEDGES (Desktop)
   .pledge__left {
     grid-area: left;
     justify-self: end;
+    align-self: start;
+    margin-top: 0;
   }
 
   .pledge__payment {
     grid-area: payment;
     flex-wrap: nowrap;
     justify-content: space-between;
+
+    align-self: center;
+
+    margin-left: -5em;
+    transform: translateX(2.5em);
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .no-reward {
+    margin-top: 0.5em;
   }
 
   .payment__title {
     text-align: left;
+    margin: 0;
+    padding: 0;
   }
 
-  .pledge__payment > .btn-small {
-    width: 25%;
+  .pledge__payment > .btn-green {
+    width: 40%;
   }
 
   .pledge__payment > .btn-transparent {
     margin-right: 1em;
+    width: 25%;
   }
 
   .modal {
@@ -611,7 +765,7 @@ PLEDGES (Desktop)
     right: 2em;
   }
 
-  .sucess-modal {
+  .success-modal {
     display: none;
     width: 540px;
     height: 380px;

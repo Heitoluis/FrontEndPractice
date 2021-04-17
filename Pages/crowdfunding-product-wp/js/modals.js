@@ -25,6 +25,7 @@ toggleModal = () => {
 modal.addEventListener("click", (e) => {
   const radio = e.target.closest(".radio");
   const btn = e.target.closest(".btn-green");
+  
   if (radio) {
     const pledge = radio.parentNode.parentNode;
 
@@ -61,7 +62,7 @@ modal.addEventListener("click", (e) => {
     }
   } else if (btn) {
     toggleModal();
-    const success = document.querySelector(".sucess-modal");
+    const success = document.querySelector(".success-modal");
     success.classList.toggle("display-modal");
 
     const btnOk = success.querySelector(".btn-green");
