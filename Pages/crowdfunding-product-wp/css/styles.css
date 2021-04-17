@@ -515,6 +515,10 @@ TYPOGRAPHY
     font-size: 1rem;
   }
 
+  .nav__link {
+    font-size: 0.8125rem;
+  }
+
   /*------------------
 BUTTONS
 -------------------*/
