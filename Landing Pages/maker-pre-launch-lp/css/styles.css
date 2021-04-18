@@ -603,19 +603,21 @@ TYPOGRAPHY (DESKTOP)
     margin-bottom: 0;
   }
 
+  .section + .section {
+    margin-left: 2em;
+  }
+
   .article {
-    max-width: 255px;
+    max-width: 240px;
     margin-left: 0;
   }
 
   .section__img-container {
     margin-left: 0;
     margin-bottom: 2em;
+
     width: 150px;
     height: 150px;
-  }
-
-  .section__img-container {
   }
 
   .section-odd,
