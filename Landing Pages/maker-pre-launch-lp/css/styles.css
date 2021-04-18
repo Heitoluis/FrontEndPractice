@@ -1,0 +1,684 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --gray: #777f98;
+  --dark-blue: #080c20;
+  --turquoise: #3ee9e5;
+  --gray-blue: #093f68;
+  --red: #ff2965;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  background-color: var(--dark-blue);
+  color: var(--gray);
+}
+
+img {
+  max-width: 100%;
+}
+
+/*-----------------
+TYPOGRAPHY
+------------------*/
+
+.hero__title,
+.article__title,
+.plan__title,
+.pricing__title,
+.plan__price,
+.footer__title {
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+}
+
+.hero__title {
+  font-size: 2rem;
+}
+
+.hero__title span {
+  color: var(--turquoise);
+}
+
+.article__title,
+.plan__title {
+  font-size: 1.125rem;
+}
+
+.pricing__title,
+.footer__title {
+  font-size: 1.5rem;
+}
+
+.plan__price {
+  font-size: 2.5rem;
+}
+
+.plan__price > span {
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+/*-----------------
+GRID CONTAINER
+------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(2em, 1fr) minmax(0, 450px) minmax(2em, 1fr);
+}
+
+.logo__container > {
+  grid-column: 1 / -1;
+}
+
+.main > * {
+  grid-column: 2 / -2;
+}
+
+/*-----------------
+HEADER
+------------------*/
+
+.header {
+  padding: 3em 2.25em 10em;
+  overflow: hidden;
+}
+
+.logo__container {
+  display: inline-block;
+  margin-bottom: 4em;
+}
+
+.header__logo {
+  height: 35px;
+}
+
+.hero__title {
+  max-width: 250px;
+  margin: 1em auto 1em;
+}
+
+.hero__info {
+  margin-top: 235px;
+  padding-top: 2em;
+  position: relative;
+}
+
+.hero__info::before {
+  content: "";
+  position: absolute;
+  left: -2em;
+  right: -2em;
+  top: -235px;
+  bottom: 100%;
+
+  background-image: url("../assets/illustration-hero-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__figure {
+  display: inline-block;
+  margin: 0 auto;
+  border: 2px var(--turquoise) solid;
+  border-radius: 13px;
+  width: 26px;
+  height: 42px;
+  position: relative;
+}
+
+.hero__figure::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.hero__body {
+  margin-bottom: 2.5em;
+}
+
+/*-----------------
+SECTIONS
+------------------*/
+
+.main__sections {
+  margin-bottom: 5em;
+}
+
+.section {
+  margin-bottom: 4em;
+}
+
+.section__img-container {
+  background-color: var(--gray-blue);
+  height: 110px;
+  width: 110px;
+  margin: 0 auto;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+
+.section__img {
+  object-fit: cover;
+}
+
+.egg-img {
+  padding-right: 1em;
+}
+
+/*-----------------
+PRICING
+------------------*/
+
+.pricing__body {
+  margin-bottom: 5em;
+}
+
+.pricing__plan {
+  border-radius: 10px;
+  text-align: left;
+  padding: 3em 2em 2em;
+  position: relative;
+  margin-bottom: 5em;
+}
+
+.pricing__plan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2em;
+
+  background-size: cover;
+  transform: translateY(-50%);
+}
+
+.free-plan {
+  background-color: var(--gray-blue);
+  color: white;
+}
+
+.free-plan::before {
+  background-image: url("../assets/icon-free.svg");
+  width: 46px;
+  height: 46px;
+}
+
+.free-plan .plan__list {
+  list-style-image: url("../assets/icon-check-free.svg");
+}
+
+.paid-plan {
+  background-color: var(--turquoise);
+  color: var(--dark-blue);
+}
+
+.paid-plan .plan__title,
+.paid-plan .plan__price {
+  color: var(--dark-blue);
+}
+
+.paid-plan::before {
+  background-image: url("../assets/icon-paid.svg");
+  width: 51px;
+  height: 65px;
+}
+
+.plan__body {
+  opacity: 60%;
+}
+
+.paid-plan .plan__list {
+  list-style-image: url("../assets/icon-check.svg");
+}
+
+.list__feature {
+  margin-bottom: 1em;
+}
+
+/*-----------------
+FOOTER
+------------------*/
+
+.footer {
+  padding-bottom: 10em;
+  background-image: url("../assets/bg-footer-squiggle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.footer__title {
+  max-width: 220px;
+  margin: 0 auto 1.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.input,
+.button {
+  border: 0;
+  outline: 0;
+  border-radius: 24px;
+  padding: 1em 2em;
+  margin-bottom: 1.5em;
+  flex-grow: 1;
+}
+
+.input {
+  background-color: var(--gray-blue);
+  border: 1px var(--gray-blue) solid;
+  color: white;
+}
+
+.input:focus {
+  border: 1px white solid;
+}
+
+::placeholder {
+  color: white;
+  font-weight: 700;
+  opacity: 40%;
+}
+
+.input_container {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start;
+  align-items: flex-start; */
+}
+
+.button {
+  background-color: var(--turquoise);
+  border: 1px var(--turquoise) solid;
+  font-weight: 700;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--dark-blue);
+  color: white;
+  cursor: pointer;
+}
+
+.error-msg {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--red);
+  padding-left: 1.5em;
+  transform: translateY(-1em);
+  align-self: flex-start;
+}
+
+.display {
+  display: block;
+}
+
+@media (max-width: 20em) {
+  .form {
+    padding: 0 1em;
+  }
+
+  .input,
+  .button {
+    padding: 1em 1.875em;
+  }
+}
+
+/*-----------------
+-------------------
+----- TABLET -----
+-------------------
+------------------*/
+
+@media (min-width: 37.5em) {
+  /*-----------------
+GRID CONTAINER (TABLET)
+------------------*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(0, 540px) minmax(2em, 1fr);
+  }
+
+  .main > * {
+    grid-column: 2 / -2;
+  }
+
+  /*-----------------
+HEADER (TABLET)
+------------------*/
+
+  .header {
+    padding-bottom: 10em;
+  }
+
+  .logo__container {
+    /* margin-right: auto;
+    margin-left: 0; */
+    margin: 0 auto 7.5em 0;
+  }
+
+  .hero__info {
+    padding-top: 0;
+    background-image: url("../assets/bg-hero-squiggle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-width: 450px;
+    margin: 0 auto;
+
+    position: relative;
+  }
+
+  .hero__title {
+    max-width: 350px;
+  }
+
+  .hero__body {
+    margin-bottom: 3em;
+    padding: 0 1em;
+  }
+
+  .hero__info::before {
+    left: 0px;
+    top: -3em;
+    width: 314px;
+    height: 356px;
+    background-image: url("../assets/illustration-hero-left.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform: translateX(-320px);
+  }
+
+  .hero__info::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: -3em;
+    width: 314px;
+    height: 356px;
+    background-image: url("../assets/illustration-hero-right.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform: translateX(320px);
+  }
+
+  /*-----------------
+SECTION (TABLET)
+------------------*/
+
+  .main {
+    margin-bottom: 3em;
+  }
+
+  .section {
+    text-align: left;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .article {
+    max-width: 340px;
+    margin-left: 3em;
+  }
+
+  .section-odd {
+    padding-left: 3em;
+  }
+
+  .section-even {
+    padding-right: 3em;
+  }
+
+  /*-----------------
+PRICING (TABLET)
+------------------*/
+
+  .plans {
+    margin: 0 4em;
+  }
+
+  .plan__price {
+    margin: 0.5em 0;
+  }
+
+  /*-----------------
+FOOTER (TABLET)
+------------------*/
+
+  .footer {
+    background-size: cover;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .footer__title {
+    max-width: initial;
+    margin-bottom: 1em;
+  }
+
+  .button {
+    padding: 1em 0em;
+    align-self: flex-start;
+  }
+
+  .input {
+    padding: 1em 1.5em;
+    flex-grow: 1;
+  }
+
+  body {
+    padding-bottom: 6em;
+  }
+}
+
+/*-----------------
+-------------------
+----- DESKTOP -----
+-------------------
+------------------*/
+
+@media (min-width: 75em) {
+  /*-----------------
+TYPOGRAPHY (DESKTOP)
+------------------*/
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .pricing__title,
+  .footer__title {
+    font-size: 2rem;
+  }
+
+  /*-----------------
+  GRID CONTAINER (DESKTOP)
+  ------------------*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(4em, 1fr) minmax(0, 1110px) minmax(4em, 1fr);
+    justify-items: center;
+  }
+
+  .main > *,
+  .logo__container > * {
+    grid-column: 2 / -2;
+  }
+
+  /*-----------------
+  HEADER (DESKTOP)
+  ------------------*/
+
+  .logo__container {
+    margin-bottom: 12.5em;
+  }
+
+  .header__logo {
+    display: block;
+    justify-self: start;
+  }
+
+  .hero__info {
+    padding-top: 0;
+    background-image: url("../assets/bg-hero-squiggle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-width: 540px;
+    margin: 0 auto;
+
+    position: relative;
+  }
+
+  .hero__title {
+    max-width: 550px;
+  }
+
+  .hero__body {
+    margin-bottom: 3em;
+  }
+
+  .hero__info::before {
+    top: -4.5em;
+    width: 408px;
+    height: 459px;
+    transform: translateX(-480px);
+  }
+
+  .hero__info::after {
+    top: -4.5em;
+    width: 408px;
+    height: 459px;
+    transform: translateX(480px);
+  }
+
+  /*-----------------
+  SECTION (DESKTOP)
+  ------------------*/
+  .main__sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2em;
+  }
+
+  .section {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .article {
+    max-width: 255px;
+    margin-left: 0;
+  }
+
+  .section__img-container {
+    margin-left: 0;
+    margin-bottom: 2em;
+    width: 150px;
+    height: 150px;
+  }
+
+  .section__img-container {
+  }
+
+  .section-odd,
+  .section-even {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-even {
+    padding-top: 5em;
+  }
+
+  /*-----------------
+  PRICING (DESKTOP)
+  ------------------*/
+
+  .pricing {
+    margin-bottom: 7.5em;
+  }
+
+  .pricing__body {
+    max-width: 700px;
+    margin: 0 auto 7.5em;
+  }
+
+  .plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 0;
+  }
+
+  .plan__body {
+    max-width: 360px;
+  }
+
+  .paid-plan {
+    padding: 4em 2em 3em;
+  }
+
+  /*-----------------
+  FOOTER (DESKTOP)
+  ------------------*/
+
+  .footer {
+    margin-bottom: 10em;
+  }
+
+  .footer__title {
+    margin-bottom: 1.25em;
+  }
+
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0 2em;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .input {
+    flex-grow: 1;
+  }
+}
