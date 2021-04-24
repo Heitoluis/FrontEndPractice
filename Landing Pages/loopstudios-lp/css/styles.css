@@ -141,6 +141,10 @@ img {
   .nav__list > * + * {
     margin-left: 2em;
   }
+
+  .header .logo {
+    max-height: 32px;
+  }
 }
 
 @media (min-width: 1200px) {
