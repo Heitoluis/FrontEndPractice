@@ -210,6 +210,7 @@ Main
 
 .intro__img {
   margin-bottom: 1em;
+  max-height: 500px;
 }
 
 .intro {
@@ -336,6 +337,7 @@ Main
 
   .intro__img {
     margin-bottom: 0em;
+
     /* width: 55%; */
   }
 
