@@ -245,6 +245,36 @@ Main
   justify-content: flex-start;
   align-items: flex-end;
   padding-left: 1em;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__img:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.gallery__img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 75%;
+  transition: transform 125ms;
+  transform: translateY(100%);
+}
+
+.gallery__img:hover::after {
+  transform: translateY(0);
+}
+
+.img-title {
+  position: relative;
+  z-index: 1;
+  color: inherit;
 }
 
 .gallery__img:nth-of-type(1) {
