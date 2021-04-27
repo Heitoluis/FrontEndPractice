@@ -1,0 +1,85 @@
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.hero__small-title {
+  font-size: 0.9375rem;
+}
+
+.small-style {
+  opacity: initial;
+  background-color: var(--black);
+  color: white;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 0.25em 0.75em;
+  margin-right: 0.5em;
+}
+
+.opacity-style {
+  opacity: 0.5;
+  letter-spacing: 4px;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-bottom: 0em;
+  line-height: 1;
+}
+
+.hero__body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  text-transform: initial;
+  opacity: 0.75;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.schedule {
+  font-size: 0.875rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: #ff5e5e;
+  color: whitesmoke;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-right: 1em;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #ff8686;
+}
+
+.nav__link {
+  font-size: 0.9375rem;
+}
+
+.icon {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1000px) {
+  .hero__title {
+    font-size: 4rem;
+    margin-bottom: 0.375em;
+  }
+
+  .hero__body {
+    max-width: 280px;
+    margin-bottom: 2.5em;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
