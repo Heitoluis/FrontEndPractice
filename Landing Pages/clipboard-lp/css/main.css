@@ -1,0 +1,60 @@
+.keep-track,
+.clipboard,
+.workflow {
+  margin-bottom: 7em;
+}
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 5em;
+}
+
+.brands > * {
+  margin-bottom: 3em;
+}
+
+.download {
+  margin-bottom: 10em;
+}
+
+@media (min-width: 1000px) {
+  .keep-track__body {
+    margin-bottom: 10em;
+  }
+
+  .keep-track__info {
+    display: flex;
+    text-align: left;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+
+  .keep-track__img {
+    max-height: 40vw;
+    position: absolute;
+    left: -2em;
+  }
+
+  .articles {
+    margin-right: 5em;
+  }
+
+  .clipboard {
+    margin-bottom: 3em;
+  }
+
+  .workflow__articles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brands {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,106 @@
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: #9eabb2;
+  text-align: center;
+  line-height: 1.7;
+}
+
+a {
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.header__body,
+.keep-track__body,
+.clipboard__body,
+.workflow__body,
+.download__body {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__title,
+.keep-track__title,
+.clipboard__title,
+.workflow__title,
+.download__title,
+.article__title {
+  color: #4c545c;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.header__title {
+  font-size: 2rem;
+  margin-top: 2em;
+}
+
+.header__body,
+.download__body {
+  margin-bottom: 2em;
+}
+
+.keep-track__title,
+.clipboard__title,
+.workflow__title,
+.download__title {
+  font-size: 1.75rem;
+}
+
+.keep-track__body,
+.article__body,
+.clipboard__body {
+  margin-bottom: 3em;
+}
+
+.workflow__body {
+  margin-bottom: 5em;
+}
+
+.article__title {
+  font-size: 1.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.375em;
+}
+
+.link {
+  color: #4c545c;
+}
+
+@media (min-width: 1000px) {
+  .header__title {
+    font-size: 2.875rem;
+  }
+
+  .header__body {
+    font-size: 1.25rem;
+  }
+
+  .header__body,
+  .download__body {
+    margin-bottom: 3em;
+  }
+
+  .keep-track__title,
+  .clipboard__title,
+  .workflow__title,
+  .download__title {
+    font-size: 2.25rem;
+  }
+
+  .keep-track__body,
+  .clipboard__body {
+    font-size: 1.125rem;
+  }
+
+  .clipboard__body {
+    margin-bottom: 4em;
+  }
+
+  .article__body {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

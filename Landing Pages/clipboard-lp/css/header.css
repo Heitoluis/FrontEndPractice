@@ -1,0 +1,18 @@
+.header {
+  background-image: url("../images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-top: 5em;
+  margin-bottom: 7em;
+}
+
+.logo {
+  max-height: 125px;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    background-image: url("../images/bg-header-desktop.png");
+  }
+}
