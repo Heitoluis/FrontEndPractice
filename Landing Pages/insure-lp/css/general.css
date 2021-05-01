@@ -8,7 +8,6 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 
 img {
@@ -87,7 +86,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-
+  overflow-x: hidden;
   z-index: 1;
   transition: transform 250ms;
   transform: translateX(100%);
