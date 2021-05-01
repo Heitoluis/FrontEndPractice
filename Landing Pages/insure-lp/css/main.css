@@ -1,0 +1,68 @@
+.main {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+.article {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  color: #837d88;
+}
+
+.more {
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right top;
+
+  background-color: var(--gray-blue);
+  color: white;
+  padding: 3em 0 4em;
+}
+
+@media (min-width: 1000px) {
+}
+
+@media (min-width: 1000px) {
+  .main {
+    text-align: left;
+    padding-top: 15em;
+    padding-bottom: 5em;
+  }
+
+  .different {
+    margin-bottom: 5em;
+  }
+
+  .articles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .article {
+    max-width: 300px;
+  }
+
+  .more {
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .articles {
+    justify-content: space-between;
+  }
+
+  .article {
+    max-width: 350px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

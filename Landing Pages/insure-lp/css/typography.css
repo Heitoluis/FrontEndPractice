@@ -1,0 +1,118 @@
+body {
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+  color: #2c2830;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero__title,
+.different__title {
+  font-size: 3rem;
+}
+
+.hero__title {
+  color: white;
+}
+
+.hero__body {
+  padding: 0 1em;
+  margin-bottom: 1.75em;
+}
+
+.different__title {
+  position: relative;
+  margin-bottom: 1.75em;
+}
+
+.hero__title::before,
+.different__title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+}
+
+.different__title::before {
+  top: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.5em;
+  background-color: #c396c6;
+}
+
+.more__title {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  color: white;
+}
+
+.article__title {
+  font-size: 1.75rem;
+}
+
+@media (min-width: 600px) {
+  .hero__title {
+    margin: 0;
+  }
+
+  .hero__body {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero__title {
+    margin: 0;
+    padding-top: 1em;
+    position: relative;
+  }
+
+  .different__title::before {
+    left: 0;
+    transform: initial;
+    width: 12.5%;
+  }
+
+  .hero__title::before {
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 2px;
+    background-color: white;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    text-align: left;
+  }
+
+  .hero__title,
+  .different__title {
+    font-size: 4.5rem;
+  }
+
+  .hero__body {
+    padding: 0;
+  }
+
+  .more__title {
+    font-size: 3.5rem;
+  }
+}
