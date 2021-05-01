@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 img {
@@ -44,8 +45,6 @@ ul {
   background-color: white;
   color: #2d2641;
 }
-
-
 
 .btn-nav {
   padding: 0.25em 1.5em;
