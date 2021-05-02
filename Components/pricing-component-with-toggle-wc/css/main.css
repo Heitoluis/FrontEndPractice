@@ -11,9 +11,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5em;
 }
 
 .pricing-selection > * + * {
+  margin: 0;
   margin-left: 1.5em;
 }
 
@@ -26,7 +28,6 @@
     var(--clr-primary-600)
   );
   border-radius: 30px;
-  margin-bottom: 5em;
 }
 
 .toggle-btn:hover {
