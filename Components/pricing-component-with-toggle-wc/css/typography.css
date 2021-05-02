@@ -1,0 +1,74 @@
+body {
+  font-size: var(--fs-400);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-400);
+}
+
+.selection {
+  opacity: 50%;
+}
+
+.plan__type {
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-400);
+}
+
+.plan__price {
+  font-size: var(--fs-900);
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.plans__annually .plan__price {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+@media (max-width: 374px) {
+  .plan__price,
+  .plans__annually .plan__price {
+    font-size: 3rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 420px) {
+  .plan__price,
+  .plans__annually .plan__price {
+    font-size: 4rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.plan:nth-child(even) .plan__type,
+.plan:nth-child(even) .plan__info {
+  color: white;
+}
+
+.plan__info {
+  color: var(--clr-neutral-400);
+  padding-top: 1em;
+  border-top: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.plan__info:nth-of-type(5) {
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+  margin-bottom: 2em;
+}
+
+.plan:nth-child(even) .plan__info {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.plan:nth-child(even) .plan__info:nth-of-type(5) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}

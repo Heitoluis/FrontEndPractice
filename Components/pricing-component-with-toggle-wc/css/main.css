@@ -1,0 +1,95 @@
+.main {
+  background-color: var(--clr-neutral-200);
+  padding-top: 2em;
+  background-image: url("../images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right top;
+}
+
+.pricing-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-selection > * + * {
+  margin-left: 1.5em;
+}
+
+.toggle-btn {
+  width: 56px;
+  height: 32px;
+  background-image: linear-gradient(
+    to right,
+    var(--clr-primary-400),
+    var(--clr-primary-600)
+  );
+  border-radius: 30px;
+  margin-bottom: 5em;
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
+}
+
+.toggle-switch {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.activate-switch {
+  left: 28px;
+}
+
+.plans {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.plan {
+  padding: 2em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+.plan:nth-child(odd) {
+  background-color: #fff;
+}
+
+.plan:nth-child(even) {
+  background-image: linear-gradient(
+    to right,
+    var(--clr-primary-400),
+    var(--clr-primary-600)
+  );
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    background-color: var(--clr-neutral-200);
+    padding-top: 2em;
+    background-image: url("../images/bg-top.svg"),
+      url("../images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right top, left bottom;
+  }
+
+  .plans__monthly,
+  .plans__annually {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .plan:nth-child(even) {
+    padding: 3.5em 2em;
+  }
+}

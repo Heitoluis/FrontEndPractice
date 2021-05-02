@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Our Pricing</h1>
+      <div class="pricing-selection">
+        <p class="selection">Annually</p>
+        <div class="toggle-btn">
+          <div class="toggle-switch"></div>
+        </div>
+        <p class="selection">Monthly</p>
+      </div>
+
+      <div class="plans main-grid">
+        <div class="plans__monthly">
+          <!-- BASIC -->
+          <div class="plan">
+            <p class="plan__type">Basic</p>
+            <p class="plan__price">$19.99</p>
+            <p class="plan__info">500 GB Storage</p>
+            <p class="plan__info">2 Users Allowed</p>
+            <p class="plan__info">Send up to 3GB</p>
+            <a class="btn btn-primary">Learn More</a>
+          </div>
+
+          <!-- PROFFESSIONAL -->
+          <div class="plan">
+            <p class="plan__type">Professional</p>
+            <p class="plan__price">$24.99</p>
+            <p class="plan__info">1TB GB Storage</p>
+            <p class="plan__info">5 Users Allowed</p>
+            <p class="plan__info">Send up to 10GB</p>
+            <a class="btn btn-secondary">Learn More</a>
+          </div>
+
+          <!-- MASTER -->
+          <div class="plan">
+            <p class="plan__type">Master</p>
+            <p class="plan__price">$39.99</p>
+            <p class="plan__info">2TB GB Storage</p>
+            <p class="plan__info">10 Users Allowed</p>
+            <p class="plan__info">Send up to 20GB</p>
+            <a class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <div class="plans__annually hide">
+          <!-- BASIC -->
+          <div class="plan">
+            <p class="plan__type">Basic</p>
+            <p class="plan__price">$199.99</p>
+            <p class="plan__info">500 GB Storage</p>
+            <p class="plan__info">2 Users Allowed</p>
+            <p class="plan__info">Send up to 3GB</p>
+            <a class="btn btn-primary">Learn More</a>
+          </div>
+
+          <!-- PROFFESSIONAL -->
+          <div class="plan">
+            <p class="plan__type">Professional</p>
+            <p class="plan__price">$249.99</p>
+            <p class="plan__info">1TB GB Storage</p>
+            <p class="plan__info">5 Users Allowed</p>
+            <p class="plan__info">Send up to 10GB</p>
+            <a class="btn btn-secondary">Learn More</a>
+          </div>
+
+          <!-- MASTER -->
+          <div class="plan">
+            <p class="plan__type">Master</p>
+            <p class="plan__price">$399.99</p>
+            <p class="plan__info">2TB GB Storage</p>
+            <p class="plan__info">10 Users Allowed</p>
+            <p class="plan__info">Send up to 20GB</p>
+            <a class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/toggle.js"></script>
+  </body>
+</html>

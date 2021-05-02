@@ -1,0 +1,18 @@
+:root {
+  box-sizing: border-box;
+  --clr-primary-400: hsl(236, 72%, 79%);
+  --clr-primary-600: hsl(237, 63%, 64%);
+
+  --clr-neutral-200: hsl(240, 80%, 98%);
+  --clr-neutral-300: hsl(234, 14%, 74%);
+  --clr-neutral-400: hsl(233, 13%, 49%);
+  --clr-neutral-600: hsl(232, 13%, 33%);
+
+  --ff-primary: "Montserrat", sans-serif;
+
+  --fs-300: 0.8125rem;
+  --fs-400: 0.9375rem;
+  --fs-500: 1.125rem;
+  --fs-700: 2rem;
+  --fs-900: 4.5rem;
+}
