@@ -13,7 +13,7 @@
     />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -24,69 +24,67 @@
     <title>Frontend Mentor | Project tracking intro component</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__top">
-          <img src="images/logo.svg" alt="logo" class="logo" />
-          <nav class="nav">
-            <img src="images/icon-hamburger.svg" class="icon menu-icon" />
-            <img src="images/icon-close.svg" class="icon close-icon hide" />
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#" class="nav__link">Product</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Features</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Pricing</a>
-              </li>
-              <li class="nav__item"><a href="#" class="nav__link">Login</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="hero">
+    <header class="header main-grid">
+      <div class="header__top">
+        <img class="logo" src="images/logo.svg" alt="logo" />
+        <nav class="nav">
           <img
-            src="images/illustration-devices.svg"
-            alt="ilustration of a laptop and a smartphone"
-            class="hero__img"
+            src="images/icon-hamburger.svg"
+            alt="menu icon"
+            class="icon-menu"
           />
 
-          <div class="hero__info">
-            <p class="hero__small-title">
-              <span class="small-style">New</span>
-              <span class="opacity-style">Monograph Dashboard</span>
-            </p>
-            <h1 class="hero__title">Powerful insights<br />into your team</h1>
-            <p class="hero__body">
-              Project planning and time tracking for agile teams
-            </p>
-            <p class="schedule">
-              <a class="btn">Schedule a demo</a>
-              <span class="opacity-style"> to see a preview</span>
-            </p>
+          <img
+            src="images/icon-close.svg"
+            alt="close icon"
+            class="icon-close display-none"
+          />
+
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Product</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Features</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <img
+          class="hero__img"
+          src="images/illustration-devices.svg"
+          alt="devices illustration"
+        />
+        <div class="hero__info">
+          <p class="hero__sm-header">
+            <span class="accent-text">New</span>
+            <span class="regular-text">Monograph Dashboard</span>
+          </p>
+          <h1 class="hero__title">Powerful insights<br />into your team</h1>
+          <div class="hero__body">
+            Project planning and time tracking<br />for agile teams
           </div>
+          <p class="hero__btn">
+            <a class="btn">Schedule a demo</a>
+            <span class="regular-text">to see a preview</span>
+          </p>
         </div>
       </div>
 
-      <div class="gray-area"></div>
+      <div class="layer"></div>
     </header>
-
     <div class="modal">
       <ul class="modal__list">
-        <li class="modal__item">
-          <a href="#" class="nav__link">Product</a>
-        </li>
+        <li class="modal__item"><a href="#" class="nav__link">Product</a></li>
         <li class="modal__item">
           <a href="#" class="nav__link">Features</a>
         </li>
-        <li class="modal__item">
-          <a href="#" class="nav__link">Pricing</a>
-        </li>
+        <li class="modal__item"><a href="#" class="nav__link">Pricing</a></li>
         <li class="modal__item"><a href="#" class="nav__link">Login</a></li>
       </ul>
     </div>
   </body>
-  <script src="js/scripts.js"></script>
+  <script src="js/modal.js"></script>
 </html>

@@ -1,86 +1,83 @@
 body {
   font-family: "Barlow Condensed", sans-serif;
-  color: var(--black);
+  color: #242942;
   text-transform: uppercase;
-}
-
-.hero__small-title {
-  font-size: 0.9375rem;
-}
-
-.small-style {
-  opacity: initial;
-  background-color: var(--black);
-  color: white;
-  font-weight: 700;
-  border-radius: 25px;
-  padding: 0.25em 0.75em;
-  margin-right: 0.5em;
-}
-
-.opacity-style {
-  opacity: 0.5;
-  letter-spacing: 4px;
-  white-space: nowrap;
 }
 
 .hero__title {
   font-size: 2.5rem;
-  margin: 0;
-  margin-bottom: 0em;
+  font-weight: 800;
   line-height: 1;
+  margin-bottom: 0.5em;
 }
 
 .hero__body {
-  font-family: "Barlow", sans-serif;
   font-size: 1.125rem;
+  font-family: "Barlow", sans-serif;
+  opacity: 75%;
   text-transform: initial;
-  opacity: 0.75;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
 }
 
-.schedule {
+.hero__sm-header {
+  font-size: 0.9375rem;
+}
+
+.accent-text {
+  background-color: #242942;
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  margin-right: 0.5em;
+  font-weight: 600;
+}
+
+.hero__btn {
   font-size: 0.875rem;
+}
+
+.regular-text {
+  opacity: 50%;
+  letter-spacing: 5px;
+  white-space: nowrap;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.75em 1.5em;
+  padding: 1em 1.5em;
   background-color: #ff5e5e;
-  color: whitesmoke;
+  color: white;
   font-weight: 700;
   border-radius: 10px;
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 
 .btn:hover {
-  cursor: pointer;
   background-color: #ff8686;
+  cursor: pointer;
 }
 
-.nav__link {
-  font-size: 0.9375rem;
+.hero__btn .regular-text {
+  letter-spacing: 2.5px;
 }
 
-.icon {
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width: 1000px) {
+@media (min-width: 1010px) {
   .hero__title {
+    margin-top: 0.25em;
     font-size: 4rem;
-    margin-bottom: 0.375em;
   }
 
   .hero__body {
-    max-width: 280px;
     margin-bottom: 2.5em;
   }
 
-  .btn {
+  .hero__btn {
     font-size: 1rem;
+  }
+
+  .hero__btn .regular-text {
+    font-size: 0.9375rem;
   }
 }
