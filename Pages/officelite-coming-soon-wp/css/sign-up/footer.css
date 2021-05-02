@@ -1,0 +1,78 @@
+.footer {
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.input,
+.select {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px currentColor solid;
+  color: #747b95;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2em;
+}
+
+.form > * {
+  flex-grow: 1;
+  margin-bottom: 1.5em;
+}
+
+.input,
+.select {
+  padding-bottom: 1em;
+  padding-left: 1em;
+  width: 100%;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90%;
+  width: 2em;
+  background-color: white;
+  pointer-events: none;
+}
+
+.custom-arrow::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 5.5px;
+  padding: 1px;
+  top: 7.5px;
+  right: 15px;
+  background-image: url("../../assets/sign-up/icon-arrow-down.svg");
+}
+
+.select {
+  font-weight: bold;
+  color: #333950;
+  padding-left: 0.75em;
+}
+
+option {
+  font-weight: 700;
+  position: relative;
+}
+
+option::after {
+  content: "550";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  color: blue;
+  background-color: blue;
+}

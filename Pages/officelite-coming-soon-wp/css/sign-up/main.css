@@ -1,0 +1,104 @@
+.calendar__boxes {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar__boxes > * + * {
+  margin-left: 1em;
+}
+
+.timebox {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(81, 117, 255, 0.1);
+  margin-bottom: 2em;
+}
+
+/* 
+.main {
+  padding-top: 2em;
+}
+
+.plan {
+  padding: 2em;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 350px;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+.plan:nth-child(even) {
+  background-image: url("../assets/home/bg-pattern-pricing.svg");
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: center top 120%;
+  background-color: var(--blue);
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .main {
+    text-align: left;
+  }
+
+  .plan {
+    max-width: 690px;
+    display: grid;
+    grid-template-areas:
+      "type . ."
+      "cost . info"
+      "user . info"
+      "btn . .";
+    justify-items: start;
+  }
+
+  .plan__type {
+    grid-area: type;
+  }
+  .plan__cost {
+    grid-area: cost;
+  }
+  .plan__users {
+    grid-area: user;
+  }
+  .plan__info {
+    grid-area: info;
+  }
+  .plan .btn {
+    grid-area: btn;
+  }
+
+  .plan:nth-child(even) {
+    background-size: 125%;
+    background-position: left -320px center;
+    background-color: var(--blue);
+    color: white;
+  }
+}
+
+@media (min-width: 1200px) {
+  .plans {
+    display: flex;
+    justify-content: center;
+  }
+
+  .plan {
+    display: block;
+    text-align: center;
+    padding: 3em;
+  }
+
+  .plan__info {
+    margin-bottom: 2em;
+  }
+
+  .plan:nth-child(even) {
+    background-size: 250%;
+    background-position: center bottom;
+    background-color: var(--blue);
+    color: white;
+  }
+} */

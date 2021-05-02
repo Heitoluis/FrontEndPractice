@@ -1,0 +1,118 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #333950;
+  line-height: 1.6;
+  text-align: center;
+}
+
+p {
+  color: #747b95;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+}
+
+.hero__body {
+  margin-bottom: 1.5em;
+}
+
+.plan__type {
+  font-size: 1.25rem;
+}
+
+.plan__cost {
+  font-size: 3.5rem;
+  margin-top: 0.5em;
+}
+
+.plan__users {
+  margin-bottom: 3em;
+  color: #333950;
+}
+
+.plan:nth-child(even) .plan__users,
+.plan:nth-child(even) .plan__info-desc {
+  color: white;
+}
+
+.plan__info {
+  opacity: 75%;
+}
+
+.calendar__info {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+}
+
+.accent-color {
+  color: var(--blue);
+}
+
+.timebox__number {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.timebox_description {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    margin-top: 0;
+  }
+
+  .plan__cost {
+    margin-top: 0.25em;
+  }
+
+  .plan__users {
+    margin: 0 0 1.5em 0;
+  }
+
+  .plan__info-desc {
+    margin-bottom: 0;
+  }
+
+  .timebox__number {
+    font-size: 3.5rem;
+  }
+
+  .timebox_description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .hero__body {
+    font-size: 1.125em;
+    margin-bottom: 2em;
+  }
+
+  .plan__cost {
+    margin-top: 0.5em;
+  }
+
+  .plan__users {
+    margin: initial;
+    margin-bottom: 3em;
+  }
+
+  .calendar__info {
+    text-align: left;
+  }
+}

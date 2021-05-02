@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --blue: rgb(81, 117, 255);
+}
+
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 768px) minmax(1em, 1fr);
+}
+
+.main-grid > * {
+  grid-column: 2 / -2;
+}
+
+/*Buttons*/
+.btn {
+  display: inline-block;
+  padding: 0.875em 3em;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: rgba(81, 117, 255, 0.15);
+  color: var(--blue);
+}
+
+.btn-white {
+  background-color: white;
+  color: var(--blue);
+}
+
+@media (min-width: 768px) {
+  .main-grid {
+    grid-template-columns: minmax(2em, 1fr) minmax(0, 1200px) minmax(2em, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-grid {
+    grid-template-columns: minmax(5em, 1fr) minmax(0, 1120px) minmax(5em, 1fr);
+  }
+}

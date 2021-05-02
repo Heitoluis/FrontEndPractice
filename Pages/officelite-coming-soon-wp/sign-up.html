@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/sign-up/general.css" />
+    <link rel="stylesheet" href="css/sign-up/typography.css" />
+    <link rel="stylesheet" href="css/sign-up/header.css" />
+    <link rel="stylesheet" href="css/sign-up/main.css" />
+    <link rel="stylesheet" href="css/sign-up/footer.css" />
+
+    <title>Frontend Mentor | Officelite coming soon site</title>
+  </head>
+  <body>
+    <header class="header main-grid">
+      <img src="assets/shared/logo.svg" alt="logo" class="logo" />
+      <div class="hero">
+        <!-- HERO INFO -->
+        <div class="hero__info">
+          <h1 class="hero__title">Work smarter. Save time.</h1>
+          <p class="hero__body">
+            Easily manage your projects. Get on the list and receive in-app
+            perks available only to early subscribers. We are moving into final
+            development and getting ready for official launch soon.
+          </p>
+        </div>
+      </div>
+      <!-- //HERO INFO -->
+    </header>
+    <main class="main main-grid">
+      <div class="calendar">
+        <!-- CALENDAR INFO -->
+        <h2 class="calendar__info">
+          Coming <span class="accent-color">4 Nov 2020</span>
+        </h2>
+        <!-- //CALENDAR INFO -->
+
+        <div class="calendar__boxes">
+          <!-- BOX DAYS -->
+          <div class="timebox">
+            <h2 class="timebox__number">47</h2>
+            <p class="timebox_description">days</p>
+          </div>
+          <!-- //BOX DAYS -->
+
+          <!-- BOX HOURS -->
+          <div class="timebox">
+            <h2 class="timebox__number">07</h2>
+            <p class="timebox_description">hours</p>
+          </div>
+          <!-- //BOX HOURS -->
+
+          <!-- BOX MINUTES -->
+
+          <div class="timebox">
+            <h2 class="timebox__number">56</h2>
+            <p class="timebox_description">minutes</p>
+          </div>
+          <!-- //BOX MINUTES -->
+
+          <!-- BOX SECONDS -->
+          <div class="timebox">
+            <h2 class="timebox__number">14</h2>
+            <p class="timebox_description">seconds</p>
+          </div>
+          <!-- //BOX SECONDS -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <form action="#" class="form">
+        <input
+          class="input combo"
+          type="text"
+          aria-label="Name"
+          placeholder="Name"
+        />
+        <input
+          class="input"
+          type="text"
+          aria-label="Email Address"
+          placeholder="Email Address"
+        />
+        <div class="custom-select">
+          <select value="Basic Pack" class="select">
+            <option price="free" value="Basic">
+              <strong>Basic Pack</strong>
+            </option>
+            <option price="free" value="Pro">Pro Pack</option>
+            <option price="free" value="Ultimate">Ultimate Pack</option>
+          </select>
+          <span class="custom-arrow"></span>
+        </div>
+
+        <input
+          class="input"
+          type="text"
+          aria-label="Phone Number"
+          placeholder="Phone Number"
+        />
+        <input
+          class="input"
+          type="text"
+          aria-label="Company"
+          placeholder="Company"
+        />
+      </form>
+    </footer>
+
+    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+    Coming 4 Nov 2020
+
+    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+    47 Days 07 Hours 56 Min 14 Sec Name Email Address Basic Pack Free Basic Pack
+    Free Pro Pack $9.99 Ultimate Pack $19.99 Phone Number Company Get on the
+    list
+  </body>
+</html>

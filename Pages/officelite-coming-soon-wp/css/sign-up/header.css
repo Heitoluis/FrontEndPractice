@@ -1,0 +1,85 @@
+.header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  background-image: url("../assets/home/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top -35%;
+}
+
+.logo {
+  max-height: 30px;
+  margin-bottom: 2em;
+  justify-self: center;
+}
+
+.hero__img,
+.hero__info {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__img {
+  width: 50vw;
+  max-width: 475px;
+}
+
+.hero__info {
+  max-width: 540px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 5em;
+    background-position: top -150px right -200px;
+    text-align: left;
+  }
+
+  .hero__img {
+    display: block;
+    width: 40vw;
+  }
+
+  .hero__info {
+    width: 43.5vw;
+  }
+
+  .logo {
+    justify-self: start;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: 3em;
+    background-position: top 100% right -40vw;
+    background-size: cover;
+  }
+
+  .logo {
+    margin-bottom: 3em;
+  }
+
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero__img {
+    display: block;
+    width: 35vw;
+  }
+
+  .hero__info {
+    width: 39.5vw;
+
+    padding-top: 3em;
+  }
+}
