@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="hero">
+        <div class="hero__img">
+          <img
+            class="hero__img"
+            src="images/image-header-mobile.jpg"
+            srcset="
+              images/image-header-mobile.jpg  320w,
+              images/image-header-desktop.jpg 640w
+            "
+            sizes="
+              (min-width: 320px) 640px, 
+              (min-width: 640px) 1200px,"
+            alt="women in office"
+          />
+        </div>
+
+        <div class="hero__info main-grid">
+          <h1 class="hero__title">
+            Get <span class="accent-color">insights</span> that help your
+            business grow.
+          </h1>
+          <p class="hero__body">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <h2 class="number">10k+</h2>
+              <p class="description">companies</p>
+            </div>
+            <div class="stat">
+              <h2 class="number">314</h2>
+              <p class="description">templates</p>
+            </div>
+            <div class="stat">
+              <h2 class="number">12m+</h2>
+              <p class="description">queries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

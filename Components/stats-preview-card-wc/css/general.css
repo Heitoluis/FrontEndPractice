@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(1.5em, 1fr) minmax(0, 500px) minmax(1.5em, 1fr);
+}
+
+.main-grid > * {
+  grid-column: 2 / -2;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 1110px) {
+  .main-grid {
+    align-items: center;
+  }
+}

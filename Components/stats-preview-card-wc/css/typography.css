@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: inter;
+  font-family: "Inter", sans-serif;
+  background-color: #0a0c1c;
+  color: #fff;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.accent-color {
+  color: #ab5cdb;
+}
+
+.hero__body {
+  font-size: 0.9375rem;
+  opacity: 75%;
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+.number {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 0.75rem;
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  opacity: 60%;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 786px) {
+  .hero__title {
+    /* font-size: 2.5rem; */
+    max-width: 350px;
+  }
+
+  .hero__body {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .hero__title {
+    font-size: 2.25rem;
+    max-width: 446px;
+  }
+
+  .hero__body {
+    margin-top: 0;
+    margin-bottom: 3em;
+    max-width: 375px;
+  }
+}
