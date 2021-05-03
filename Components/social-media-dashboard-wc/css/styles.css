@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --main-background: #1d1f29;
+  --board-background: #252b42;
+  --hover-background: #333a55;
+
+  --main-color: white;
+  --secondary-color: #8c98c6;
+
+  --facebook-clr: #178ff5;
+  --twitter-clr: #1da1f2;
+  --instagram-clr-1: #df4896;
+  --instagram-clr-2: #ee877e;
+  --instagram-clr-3: #fdc366;
+  --youtube-clr: #c4032b;
+
+  --green-up: #1eb589;
+  --red-down: #dc414c;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--main-background);
+  color: var(--main-color);
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*--------------
+TYPOGRAPHY
+---------------*/
+
+.header__title,
+.today-board__title {
+  font-size: 1.5rem;
+}
+
+.followers,
+.theme__mode,
+.today-board__title {
+  font-size: 0.875rem;
+}
+
+.board__number {
+  font-size: 3.5rem;
+}
+
+.today-board__number {
+  font-size: 2rem;
+}
+
+.board__activity,
+.social__account {
+  font-size: 0.75rem;
+}
+
+.followers,
+.theme,
+.board__description,
+.today-board__title,
+.social__account {
+  color: var(--secondary-color);
+}
+
+.board__description {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/*--------------
+ICONS
+---------------*/
+
+.fab {
+  font-size: 1.5rem;
+}
+
+.fa-facebook-square {
+  color: var(--facebook-clr);
+}
+
+.fa-twitter {
+  color: var(--twitter-clr);
+}
+
+.fa-instagram {
+  display: inline-block;
+  background-image: linear-gradient(
+    45deg,
+    var(--instagram-clr-1),
+    var(--instagram-clr-2),
+    var(--instagram-clr-3)
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube {
+  color: var(--youtube-clr);
+}
+
+.activity-icon {
+  object-fit: contain;
+}
+
+/*--------------
+GRID CONTAINER
+--------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(2em, 1fr) minmax(0, 400px) minmax(2em, 1fr);
+}
+
+.grid-container > * {
+  grid-column: 2 / -2;
+}
+
+/*--------------
+HEADER
+---------------*/
+
+.header {
+  padding-top: 2em;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__info {
+  border-bottom: 1px var(--secondary-color) solid;
+}
+
+.theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button__mode {
+  height: 24px;
+  width: 48px;
+  border-radius: 30px;
+  background-color: white;
+  background-image: linear-gradient(#40db82, #388fe7);
+}
+
+.button__switch {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  height: 1.125em;
+  width: 1.125em;
+  border-radius: 50%;
+  background-color: var(--board-background);
+  position: relative;
+  top: 3px;
+
+  left: 4px;
+}
+
+.darkmode-off {
+  left: 28px;
+}
+
+/*--------------
+MAIN DASHBOARD
+---------------*/
+
+.main {
+  padding-bottom: 2em;
+}
+
+.main__dashboard {
+  display: grid;
+
+  row-gap: 1.5em;
+  margin-bottom: 1em;
+}
+
+.board {
+  background-color: var(--board-background);
+  padding: 2em 1em;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.today-board:hover,
+.board:hover {
+  cursor: pointer;
+  background-color: var(--hover-background);
+}
+
+.board:nth-child(1) {
+  border-top: 10px var(--facebook-clr) solid;
+}
+
+.board:nth-child(2) {
+  border-top: 10px var(--twitter-clr) solid;
+}
+
+.board:nth-child(3) {
+  border-top: 10px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    45deg,
+    var(--instagram-clr-1),
+    var(--instagram-clr-2),
+    var(--instagram-clr-3)
+  );
+  border-radius: 10px;
+}
+
+.board:nth-child(4) {
+  border-top: 10px var(--youtube-clr) solid;
+}
+
+.social__account,
+.board__activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.social__user {
+  margin: 0;
+  padding: 0;
+}
+
+.board__number {
+  margin: 0.25em 0 0;
+  padding: 0;
+}
+
+.board__description {
+  margin-top: 0;
+  letter-spacing: 3px;
+}
+
+.board__activity > p {
+  margin: 0;
+}
+
+.up-activity {
+  color: var(--green-up);
+}
+
+.down-activity {
+  color: var(--red-down);
+}
+
+/*--------------
+TODAY DASHBOARD
+---------------*/
+
+.today-boards {
+  display: grid;
+
+  row-gap: 1em;
+}
+
+.today-board {
+  background-color: var(--board-background);
+  padding: 1em 1em;
+  border-radius: 5px;
+}
+
+.today-board__top,
+.today-board__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.today-board__top {
+  margin-bottom: 1em;
+}
+
+.today-board__number {
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  /*--------------
+HEADER
+--------------*/
+
+  .header__content {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+
+  .header__info {
+    border-bottom: initial;
+  }
+
+  .button__mode {
+    margin-left: 1em;
+  }
+
+  /*--------------
+GRID CONTAINER
+--------------*/
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(0, 1400px) minmax(2em, 1fr);
+  }
+
+  .grid-container > * {
+    grid-column: 2 / -2;
+  }
+
+  /*--------------
+MAIN DASHBOARD
+---------------*/
+
+  /* .main {
+    padding-bottom: 2em;
+  } */
+
+  .main__dashboard,
+  .today-boards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2em;
+  }
+
+  /*--------------
+TODAY DASHBOARD
+---------------*/
+  /* 
+.today-boards {
+    display: grid;
+  
+    row-gap: 1em;
+  }
+} */
+}

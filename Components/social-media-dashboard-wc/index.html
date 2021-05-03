@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <header class="header grid-container">
+      <div class="header__content">
+        <div class="header__info">
+          <h1 class="header__title">Social Media Dashboard</h1>
+          <p class="followers">Total Followers: 23,004</p>
+        </div>
+        <div class="theme">
+          <p class="theme__mode">Dark Mode</p>
+          <div class="button__mode">
+            <button class="button__switch"></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main grid-container">
+      <div class="main__dashboard">
+        <div class="board">
+          <div class="social__account">
+            <i class="fab fa-facebook-square"></i>
+            <p class="social__user">@nathanf</p>
+          </div>
+          <p class="board__number">1987</p>
+          <p class="board__description">Followers</p>
+          <div class="board__activity up-activity">
+            <img
+              class="activity-icon"
+              src="images/icon-up.svg"
+              alt="triangle arrow pointing up"
+            />
+            <p>12 Today</p>
+          </div>
+        </div>
+
+        <div class="board">
+          <div class="social__account">
+            <i class="fab fa-twitter"></i>
+            <p class="social__user">@nathanf</p>
+          </div>
+          <p class="board__number">1044</p>
+          <p class="board__description">Followers</p>
+          <div class="board__activity up-activity">
+            <img
+              class="activity-icon"
+              src="images/icon-up.svg"
+              alt="triangle arrow pointing up"
+            />
+            <p>99 Today</p>
+          </div>
+        </div>
+
+        <div class="board">
+          <div class="social__account">
+            <i class="fab fa-instagram"></i>
+            <p class="social__user">@realnathanf</p>
+          </div>
+          <p class="board__number">11k</p>
+          <p class="board__description">Followers</p>
+          <div class="board__activity up-activity">
+            <img
+              class="activity-icon"
+              src="images/icon-up.svg"
+              alt="triangle arrow pointing up"
+            />
+            <p>1099 Today</p>
+          </div>
+        </div>
+
+        <div class="board">
+          <div class="social__account">
+            <i class="fab fa-youtube"></i>
+            <p class="social__user">Nathan F.</p>
+          </div>
+          <p class="board__number">8239</p>
+          <p class="board__description">Subscribers</p>
+          <div class="board__activity down-activity">
+            <img
+              class="activity-icon"
+              src="images/icon-down.svg"
+              alt="triangle arrow pointing down"
+            />
+            <p>144 Today</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OVERVIEW -->
+
+      <div class="overview__dashboard">
+        <h2 class="overview__title">Overview - Today</h2>
+
+        <div class="today-boards">
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Page Views</h3>
+              <i class="fab fa-facebook-square"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">87</p>
+              <div class="board__activity up-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-up.svg"
+                  alt="triangle arrow pointing up"
+                />
+                <p>3%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Likes</h3>
+              <i class="fab fa-facebook-square"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">52</p>
+              <div class="board__activity down-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-down.svg"
+                  alt="triangle arrow pointing down"
+                />
+                <p>2%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Likes</h3>
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">5462</p>
+              <div class="board__activity up-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-up.svg"
+                  alt="triangle arrow pointing up"
+                />
+                <p>2257%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Profile Views</h3>
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">52k</p>
+              <div class="board__activity up-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-up.svg"
+                  alt="triangle arrow pointing up"
+                />
+                <p>1375%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Retweets</h3>
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">117</p>
+              <div class="board__activity up-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-up.svg"
+                  alt="triangle arrow pointing up"
+                />
+                <p>303%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Likes</h3>
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">507</p>
+              <div class="board__activity up-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-up.svg"
+                  alt="triangle arrow pointing up"
+                />
+                <p>553%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Likes</h3>
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">107</p>
+              <div class="board__activity down-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-down.svg"
+                  alt="triangle arrow pointing down"
+                />
+                <p>19%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="today-board">
+            <div class="today-board__top">
+              <h3 class="today-board__title">Total Views</h3>
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="today-board__bottom">
+              <p class="today-board__number">1407</p>
+              <div class="board__activity down-activity">
+                <img
+                  class="activity-icon"
+                  src="images/icon-down.svg"
+                  alt="triangle arrow pointing down"
+                />
+                <p>12%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/scripts.js"></script>
+</html>
