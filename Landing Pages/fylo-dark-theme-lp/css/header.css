@@ -1,0 +1,67 @@
+.header {
+  padding-top: 2em;
+  padding-bottom: 3em;
+  background-color: hsl(217, 28%, 15%);
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 135%;
+  background-position: bottom;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.logo {
+  max-height: 24px;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_list > * + * {
+  margin-left: 1.5em;
+}
+
+.nav__item {
+  font-weight: 400;
+}
+
+.nav__item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.hero__img {
+  margin-bottom: 2em;
+  max-height: 534px;
+}
+
+@media (min-width: 54em /*864px*/) {
+  .header {
+    padding-top: 5em;
+  }
+
+  .header__top {
+    margin-bottom: 5em;
+  }
+
+  /* .hero__img {
+    height: 50%;
+  } */
+
+  .logo {
+    max-height: 52px;
+  }
+
+  .nav__link {
+    font-size: 1rem;
+  }
+}

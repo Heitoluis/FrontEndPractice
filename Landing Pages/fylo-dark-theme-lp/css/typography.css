@@ -1,0 +1,131 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.hero__title {
+  font-size: 1.5rem;
+}
+
+.hero__body {
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.article__title,
+.productive__title,
+.access__title {
+  font-size: 1.125rem;
+}
+
+.comment__body,
+.user__name {
+  font-size: 0.625rem;
+}
+
+.comment__body {
+  margin-bottom: 2em;
+}
+
+.user__position {
+  font-size: 0.4375rem;
+}
+
+.user__name,
+.user__position {
+  margin: 0;
+  padding: 0;
+}
+
+.access__body {
+  margin-bottom: 2em;
+}
+
+.nav__link {
+  font-size: 0.75rem;
+}
+
+.icon__item,
+.location__item,
+.item {
+  font-size: 1rem;
+}
+
+.social__list {
+  display: flex;
+  margin: 0 auto;
+}
+
+.social__list > * + * {
+  margin-left: 1.5em;
+}
+
+.social__item {
+  border: 1px solid white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 54em /*864px*/) {
+  .hero__title,
+  .productive__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__title {
+    max-width: 734px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__body {
+    font-size: 1.25rem;
+    max-width: 589px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .access__title {
+    font-size: 2rem;
+  }
+
+  .access__body {
+    max-width: 650px;
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+
+  .article__title {
+    font-size: 1.25rem;
+  }
+
+  .productive__title {
+    max-width: 340px;
+  }
+
+  .productive__body {
+    max-width: 560px;
+    font-size: 1rem;
+  }
+}
