@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Coffeeroasters subscription site</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- TOP -->
+    <header class="header grid-main">
+      <div class="header__top">
+        <img class="logo" src="assets/shared/logo.svg" alt="logo" />
+        <nav class="nav">
+          <img
+            class="icon-hamburger"
+            src="assets/shared/mobile/icon-hamburger.svg"
+            alt="icon-hamburger"
+          />
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About us</a>
+            </li>
+            <li class="nav__item">
+              <a href="plan.html" class="nav__link">Create your plan</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- MODAL -->
+      <div class="modal-nav">
+        <div class="modal-nav__top">
+          <img class="logo" src="assets/shared/logo.svg" alt="logo" />
+          <nav class="nav">
+            <img
+              class="close-icon"
+              src="assets/shared/mobile/icon-close.svg"
+              alt="icon-close"
+            />
+          </nav>
+        </div>
+
+        <nav class="nav">
+          <ul class="modal-nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About us</a>
+            </li>
+            <li class="nav__item">
+              <a href="plan.html" class="nav__link">Create your plan</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main grid-main">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__info">
+          <h1 class="hero__title">Great coffee made simple.</h1>
+          <p class="hero__body">
+            Start your mornings with the world’s best coffees. Try our expertly
+            curated artisan coffees from our best roasters delivered directly to
+            your door, at your schedule.
+          </p>
+          <a class="btn btn-primary" href="plan.html">Create your plan</a>
+        </div>
+      </section>
+
+      <section class="our-collection">
+        <p class="our-collection__title">our collection</p>
+
+        <!-- OUR COLLECTION -->
+        <ul class="collection">
+          <li class="collection__item">
+            <div class="coffee">
+              <img
+                src="assets/home/image-gran-espresso.png"
+                alt="Gran Espresso Coffee"
+                class="coffee__img"
+              />
+
+              <h2 class="coffee__title">Gran Espresso</h2>
+              <p class="coffee__body">
+                Light and flavorful blend with cocoa and black pepper for an
+                intense experience
+              </p>
+            </div>
+          </li>
+
+          <!-- COLLECTION -->
+          <li class="collection__item">
+            <div class="coffee">
+              <img
+                src="assets/home/image-planalto.png"
+                alt="Planalto Coffee"
+                class="coffee__img"
+              />
+              <h2 class="coffee__title">Planalto</h2>
+              <p class="coffee__body">
+                Brazilian dark roast with rich and velvety body, and hints of
+                fruits and nuts
+              </p>
+            </div>
+          </li>
+
+          <li class="collection__item">
+            <div class="coffee">
+              <img
+                src="assets/home/image-piccollo.png"
+                alt="Piccollo Coffee"
+                class="coffee__img"
+              />
+              <h2 class="coffee__title">Piccollo</h2>
+              <p class="coffee__body">
+                Mild and smooth blend featuring notes of toasted almond and
+                dried cherry
+              </p>
+            </div>
+          </li>
+
+          <li class="collection__item">
+            <div class="coffee">
+              <img
+                src="assets/home/image-danche.png"
+                alt="Danche Coffee"
+                class="coffee__img"
+              />
+              <h2 class="coffee__title">Danche</h2>
+              <p class="coffee__body">
+                Ethiopian hand-harvested blend densely packed with vibrant fruit
+                notes
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- WHY CHOSE US -->
+      <section class="chose-us">
+        <div class="chose-us__info">
+          <h2 class="chose-us__title">Why choose us?</h2>
+          <p class="chose-us__body">
+            A large part of our role is choosing which particular coffees will
+            be featured in our range. This means working closely with the best
+            coffee growers to give you a more impactful experience on every
+            level.
+          </p>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="features">
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="feature">
+                <img
+                  class="feature__img"
+                  src="assets/home/icon-coffee-bean.svg"
+                  alt="Coffee Bean Icon"
+                />
+                <h2 class="feature__title">Best quality</h2>
+                <p class="feature__body">
+                  Discover an endless variety of the world’s best artisan coffee
+                  from each of our roasters.
+                </p>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="feature">
+                <img
+                  class="feature__img"
+                  src="assets/home/icon-gift.svg"
+                  alt="Gift Icon"
+                />
+                <h2 class="feature__title">Exclusive benefits</h2>
+                <p class="feature__body">
+                  Special offers and swag when you subscribe, including 30% off
+                  your first shipment.
+                </p>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="feature">
+                <img
+                  class="feature__img"
+                  src="assets/home/icon-truck.svg"
+                  alt="Truck Icon"
+                />
+                <h2 class="feature__title">Free shipping</h2>
+                <p class="feature__body">
+                  We cover the cost and coffee is delivered fast. Peak
+                  freshness: guaranteed.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="works">
+        <h2 class="works__title">How it works</h2>
+
+        <ul class="works__list">
+          <li class="works__item">
+            <div class="step">
+              <p class="step__number step-line">01</p>
+              <h2 class="step__title">Pick your coffee</h2>
+              <p class="step__body">
+                Select from our evolving range of artisan coffees. Our beans are
+                ethically sourced and we pay fair prices for them. There are new
+                coffees in all profiles every month for you to try out.
+              </p>
+            </div>
+          </li>
+
+          <li class="works__item">
+            <div class="step">
+              <p class="step__number step-line">02</p>
+              <h2 class="step__title">Choose the frequency</h2>
+              <p class="step__body">
+                Customize your order frequency, quantity, even your roast style
+                and grind type. Pause, skip or cancel your subscription with no
+                commitment through our online portal.
+              </p>
+            </div>
+          </li>
+
+          <li class="works__item">
+            <div class="step">
+              <p class="step__number">03</p>
+              <h2 class="step__title">Receive and enjoy!</h2>
+              <p class="step__body">
+                We ship your package within 48 hours, freshly roasted. Sit back
+                and enjoy award-winning world-class coffees curated to provide a
+                distinct tasting experience.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <a class="btn btn-primary" href="plan.html">Create your plan</a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer grid-main">
+      <div class="footer__content">
+        <img
+          class="footer__logo"
+          src="assets/shared/logo-white.svg"
+          alt="logo"
+        />
+        <ul class="footer__list">
+          <li class="footer__item"><a href="index.html" class="footer__link">Home</a></li>
+          <li class="footer__item">
+            <a href="about.html" class="footer__link">About us</a>
+          </li>
+          <li class="footer__item">
+            <a href="plan.html" class="footer__link">Create your plan</a>
+          </li>
+        </ul>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" aria-label="Facebook" class="social__link"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="#" aria-label="Twitter" class="social__link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" aria-label="Instagram" class="social__link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="js/header.js"></script>
+</html>
