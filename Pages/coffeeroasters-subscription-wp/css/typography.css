@@ -4,6 +4,7 @@ body {
 
   line-height: 1.7;
   text-align: center;
+  counter-reset: option;
 }
 
 h1,
@@ -287,6 +288,12 @@ HEADER (GENERAL)
     font-size: 2rem;
   }
 
+  .feature__title,
+  .feature__body {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
   .works__title {
     text-align: left;
   }
@@ -327,15 +334,17 @@ HEADER (GENERAL)
   }
 
   .selection__title {
+    margin-top: 0;
     font-size: 2rem;
+    max-width: initial;
+  }
+
+  .selection__title::after {
+    right: 0;
   }
 
   .option__body {
     font-size: 1rem;
-  }
-
-  .selection__title {
-    max-width: initial;
   }
 }
 
@@ -353,22 +362,118 @@ HEADER (GENERAL)
     z-index: 1;
   }
 
-  .step-line::after {
+  /* .step-line::after {
     content: "";
     position: absolute;
     top: 0.22em;
     left: 0;
-    width: calc((100vw / 3) + 0.125em);
+    width: calc((100vw / 3));
     height: 1px;
     background-color: #fdd6ba;
-    /* z-index: -1; */
-  }
+  } */
 
   .our-collection__title {
     font-size: 6rem;
   }
+}
 
-  .selection__title::after {
-    right: 0;
+@media (min-width: 75em/*(1200px)*/) {
+  body {
+    font-size: 1rem;
   }
+
+  .hero__title {
+    font-size: 4.5rem;
+    max-width: 500px;
+    margin-top: 0;
+    margin-bottom: 0.375em;
+  }
+
+  .hero__body {
+    max-width: 400px;
+    margin-bottom: 2.5em;
+  }
+
+  .our-collection__title {
+    font-size: 9.375rem;
+  }
+
+  .chose-us__title {
+    font-size: 2.5rem;
+  }
+
+  .feature__title {
+    margin-bottom: 1em;
+  }
+
+  .step-line::after {
+    width: calc((1110px / 3) + 0.125em);
+  }
+
+  .step__title {
+    max-width: 215px;
+  }
+
+  .works__title {
+  }
+
+  /*-------------------------
+            ABOUT
+--------------------------*/
+
+  .about__title,
+  .quality__title {
+    font-size: 2.5rem;
+  }
+
+  .headquarter__country {
+    font-size: 2em;
+  }
+
+  .headquarters__list > * + * {
+    margin-left: 7.5em;
+  }
+
+  /*-------------------------
+            PLAN
+--------------------------*/
+
+  .plan__title {
+    font-size: 4.5rem;
+  }
+
+  .plan__body {
+    max-width: 445px;
+  }
+
+  .options__link {
+    font-size: 1.5rem;
+    font-family: "Fraunces", serif;
+    color: #83888f;
+  }
+
+  .options__link::before {
+    counter-increment: option;
+    content: "0" counter(option) "   ";
+    white-space: pre;
+  }
+
+  .options__link:hover {
+    cursor: pointer;
+    color: #333d4b;
+  }
+
+  .selection__title {
+    font-size: 2.5rem;
+  }
+
+  .order__title {
+    margin-top: 0;
+  }
+
+  .order__body {
+    margin-bottom: 0;
+  }
+
+
 }

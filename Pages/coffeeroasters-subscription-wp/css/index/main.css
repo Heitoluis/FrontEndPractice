@@ -60,7 +60,7 @@
   margin-bottom: 5em;
 }
 
-@media (min-width: 40em/*(640px)*/) {
+@media (min-width: 48em/*(768px)*/) {
   .hero {
     padding: 5em 3em;
     background-image: url("../../assets/home/tablet/image-hero-coffeepress.jpg");
@@ -145,8 +145,6 @@
 
   .feature__title,
   .feature__body {
-    margin: 0;
-    margin-bottom: 0.5em;
     grid-column: 2;
     justify-self: start;
     max-width: 344px;
@@ -172,11 +170,110 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 3em;
+    position: relative;
+  }
+
+  .works__list::before {
+    content: "";
+    position: absolute;
+    top: 3.5em;
+    left: 1em;
+    width: calc(100% - 215px);
+    height: 1px;
+    background-color: #fdd6ba;
   }
 
   .step {
     max-width: 215px;
   }
+}
 
+@media (min-width: 75em/*(1200px)*/) {
+  .hero {
+    background-image: url("../../assets/home/desktop/image-hero-coffeepress.jpg");
+  }
 
+  .hero__info {
+    max-width: initial;
+  }
+
+  .collection {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .coffee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -2em;
+  }
+
+  .coffee > * {
+    align-self: center;
+    max-width: 250px;
+  }
+
+  .coffee__img {
+    margin-bottom: 2.5em;
+    margin-left: 1em;
+  }
+
+  .features {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .features__list > * + * {
+    margin-left: 2em;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3em 3em;
+    margin: 0;
+  }
+
+  .feature > * {
+    align-self: center;
+    max-width: 250px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .feature__img {
+    margin-bottom: 3em;
+  }
+
+  .works {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .works {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .works__list::before {
+    top: 3.25em;
+    width: calc(100% - 285px);
+  }
+
+  .step {
+    max-width: 285px;
+  }
 }

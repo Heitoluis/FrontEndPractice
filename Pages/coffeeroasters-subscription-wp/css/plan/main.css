@@ -11,7 +11,6 @@
   background-repeat: no-repeat;
   color: #fff;
   border-radius: 10px;
-
   margin-bottom: 7em;
 }
 
@@ -108,7 +107,7 @@
 }
 
 .modal__top {
-  background-color: 333d4b;
+  background-color: #333d4b;
   color: #fff;
 }
 
@@ -148,6 +147,17 @@
     max-width: 390px;
     text-align: left;
   }
+
+  .works {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2em 3em 3em;
+    position: relative;
+  }
+
+  .works__list > * + * {
+    margin-left: 1em;
+  }
 }
 
 @media (min-width: 48em/*(768px)*/) {
@@ -161,6 +171,16 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 3em;
+  }
+
+  .works__list::before {
+    content: "";
+    position: absolute;
+    top: 5.5em;
+    left: 4em;
+    width: calc(100% - 215px - 5em);
+    height: 1px;
+    background-color: #fdd6ba;
   }
 
   .step {
@@ -186,7 +206,6 @@
   }
 
   .options__item {
-    /* margin-bottom: 1em; */
   }
 
   .option {
@@ -197,10 +216,100 @@
 
   .option__body {
     margin-left: 0;
-    margin-right: 0;  
+    margin-right: 0;
   }
 
   .order-summary {
     padding: 2em 2.5em;
+  }
+}
+
+@media (min-width: 75em/*(1200px)*/) {
+  .plan {
+    padding: 6em;
+    background-image: url("../../assets/plan/desktop/image-hero-blackcup.jpg");
+    margin-bottom: 5em;
+  }
+
+  .plan__info {
+    max-width: initial;
+    text-align: left;
+  }
+
+  .works {
+    padding: 2em 5em 3em;
+  }
+
+  .works__list::before {
+    content: "";
+    position: absolute;
+    top: 5.25em;
+    left: 5em;
+    width: calc(100% - 285px - 8em);
+    height: 1px;
+    background-color: #fdd6ba;
+  }
+
+  .step {
+    max-width: 285px;
+  }
+
+  .selection-options {
+    display: block;
+  }
+
+  .selection-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .options__list {
+    min-width: 255px;
+    margin-left: 5em;
+  }
+
+  .selection-options .options__item {
+    margin-bottom: 3em;
+
+    position: relative;
+  }
+
+  .selection-options .options__item::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #83888f;
+    opacity: 25%;
+  }
+
+  .option {
+    padding: 1em 2em 3em;
+    max-width: 235px;
+  }
+
+  .selection__list {
+    margin-right: 5em;
+  }
+
+  .order {
+    max-width: 730px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-summary {
+    margin-bottom: 2em;
+  }
+
+  .create-plan {
+    align-self: flex-end;
   }
 }
