@@ -3,7 +3,8 @@ const screenNumber = document.querySelector(".calculator__number");
 var operation = "none";
 var pointAdded = false;
 var newNumber = true;
-var lastNumber = null;
+var leftSideNumber = null;
+var rightSideNumber = null;
 var bError = false;
 
 keyboard.addEventListener("click", (e) => {
@@ -24,7 +25,7 @@ keyboard.addEventListener("click", (e) => {
     }
 
     operation = value; //asigns '+', '-', '*' or '/'.
-    lastNumber = parseFloat(screenNumber.innerHTML);
+    leftSideNumber = parseFloat(screenNumber.innerHTML);
     newNumber = true;
     pointAdded = false;
   } else if (e.target.classList.contains("key__del")) {
@@ -32,6 +33,9 @@ keyboard.addEventListener("click", (e) => {
   } else if (e.target.classList.contains("key__equal")) {
     CheckForLonelyComma();
 
+    if (!newNumber || !rightSideNumber) {
+      rightSideNumber = parseFloat(screenNumber.innerHTML);
+    }
     if (operation != "none") {
       PerformOperation();
     }
@@ -88,16 +92,16 @@ function DeleteLastValue() {
 }
 
 function PerformOperation() {
-  if (lastNumber == null) return;
+  if (leftSideNumber == null) return;
 
   var result;
 
   if (operation == "+") {
-    result = lastNumber + parseFloat(screenNumber.innerHTML);
+    result = leftSideNumber + rightSideNumber;
   } else if (operation == "-") {
-    result = lastNumber - parseFloat(screenNumber.innerHTML);
+    result = leftSideNumber - rightSideNumber;
   } else if (operation == "x") {
-    result = lastNumber * parseFloat(screenNumber.innerHTML);
+    result = leftSideNumber * rightSideNumber;
   } else if (operation == "/") {
     if (screenNumber.innerHTML === "0") {
       screenNumber.innerHTML = "Error";
@@ -105,15 +109,15 @@ function PerformOperation() {
       return;
     }
 
-    result = lastNumber / parseFloat(screenNumber.innerHTML);
+    result = leftSideNumber / rightSideNumber;
   }
 
-  if (isNaN(result) || result> 999999999999) {
+  if (isNaN(result) || result > 999999999999) {
     screenNumber.innerHTML = "Error";
     bError = true;
   } else {
-
     screenNumber.innerHTML = result;
+    leftSideNumber = result;
   }
 }
 
@@ -121,7 +125,8 @@ function Reset() {
   screenNumber.innerHTML = 0;
   operation = "none";
   pointAdded = false;
-  lastNumber = null;
+  leftSideNumber = null;
+  rightSideNumber = 0;
   newNumber = true;
   bError = false;
 }
