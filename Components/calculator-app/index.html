@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/component.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="calculator grid-main">
+      <div class="calculator__top">
+        <h1 class="calculator__title">calc</h1>
+        <div class="calculator__themes">
+          <h3 class="theme__title">Theme</h3>
+          <p class="theme__number">1</p>
+          <p class="theme__number">2</p>
+          <p class="theme__number">3</p>
+          <div class="theme__button default__theme">
+            <div class="theme__switch"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator__screen">
+        <p class="calculator__number">0</p>
+      </div>
+
+      <div class="calculator__keyboard">
+        <div class="key key__number">
+          <p class="key__value">7</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">8</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">9</p>
+        </div>
+
+        <div class="key key__del key__function">
+          <p class="key__value">Del</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">4</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">5</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">6</p>
+        </div>
+
+        <div class="key key__sign">
+          <p class="key__value">+</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">1</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">2</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">3</p>
+        </div>
+
+        <div class="key key__sign">
+          <p class="key__value">-</p>
+        </div>
+
+        <div class="key key__point">
+          <p class="key__value">.</p>
+        </div>
+
+        <div class="key key__number">
+          <p class="key__value">0</p>
+        </div>
+
+        <div class="key key__sign">
+          <p class="key__value">/</p>
+        </div>
+
+        <div class="key key__sign">
+          <p class="key__value">x</p>
+        </div>
+
+        <div class="key key__reset key__function">
+          <p class="key__value">Reset</p>
+        </div>
+
+        <div class="key key__equal key__function">
+          <p class="key__value">=</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/themes.js"></script>
+    <script src="js/operations.js"></script>
+  </body>
+</html>

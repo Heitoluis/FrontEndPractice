@@ -1,0 +1,49 @@
+body {
+  font-family: "Spartan", sans-serif;
+}
+
+.calculator__title {
+  font-size: 2rem;
+}
+
+.theme__title,
+.theme__number {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.theme__title {
+  margin-top: 0.25em;
+  margin-right: 2em;
+}
+
+.calculator__number {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.key__value {
+  font-size: 1.75rem;
+  margin: 0;  
+}
+
+.key__function .key__value {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48em) {
+  .calculator__number {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .key__value {
+    font-size: 2rem;
+  }
+
+  .key__function .key__value {
+    font-size: 1.25rem;
+  }
+}
