@@ -1,7 +1,7 @@
 .header {
   padding: 2em var(--margins);
 
-  background-image: url("./../../images/mobile/image-header.jpg");
+  background-image: url("../../../images/mobile/image-header.jpg");
   background-size: cover;
   background-position: top;
   height: calc(100vw * 1.42);
@@ -44,7 +44,7 @@
   .header__title::after {
     content: "";
     position: absolute;
-    background-image: url("./../../images/icon-arrow-down.svg");
+    background-image: url("../../../images/icon-arrow-down.svg");
     background-size: cover;
     width: 36px;
     height: 114px;
@@ -116,7 +116,7 @@
 @media (min-width: 48em) {
   .header {
     padding-top: 4em;
-    background-image: url("./../../images/desktop/image-header.jpg");
+    background-image: url("../../../images/desktop/image-header.jpg");
     height: calc(100vw * 0.55);
     max-height: 100vh;
 
