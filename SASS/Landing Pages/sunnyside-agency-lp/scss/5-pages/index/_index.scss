@@ -10,7 +10,7 @@ body#index {
   }
 
   .square:nth-child(1) {
-    background-image: url("../../../images/mobile/image-transform.jpg");
+    background-image: url("./../../../images/mobile/image-transform.jpg");
   }
 
   .square:nth-child(2),
@@ -20,7 +20,7 @@ body#index {
   }
 
   .square:nth-child(3) {
-    background-image: url("../../../images/mobile/image-stand-out.jpg");
+    background-image: url("./../../../images/mobile/image-stand-out.jpg");
   }
 
   .btn-link {
@@ -54,7 +54,7 @@ body#index {
 
   .btn-yellow::after {
     background-color: rgba(250, 212, 0, 25%);
-  }  
+  }
 
   .btn-red::after {
     background-color: rgba(254, 119, 102, 25%);
@@ -87,7 +87,7 @@ body#index {
   }
 
   .square-info:nth-child(5) {
-    background-image: url("../../../images/mobile/image-graphic-design.jpg");
+    background-image: url("./../../../images/mobile/image-graphic-design.jpg");
 
     h2,
     p {
@@ -96,7 +96,7 @@ body#index {
   }
 
   .square-info:nth-child(6) {
-    background-image: url("../../../images/mobile/image-photography.jpg");
+    background-image: url("./../../../images/mobile/image-photography.jpg");
 
     h2,
     p {
@@ -131,7 +131,7 @@ body#index {
     .square:nth-child(1) {
       grid-row: 1;
       grid-column: 2;
-      background-image: url("../../../images/desktop/image-transform.jpg");
+      background-image: url("./../../../images/desktop/image-transform.jpg");
     }
 
     .square:nth-child(2),
@@ -149,11 +149,11 @@ body#index {
     }
 
     .square-info:nth-child(5) {
-      background-image: url("../../../images/desktop/image-graphic-design.jpg");
+      background-image: url("./../../../images/desktop/image-graphic-design.jpg");
     }
 
     .square-info:nth-child(6) {
-      background-image: url("../../../images/desktop/image-photography.jpg");
+      background-image: url("./../../../images/desktop/image-photography.jpg");
     }
 
     .testimonials {
