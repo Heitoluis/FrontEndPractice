@@ -1,0 +1,150 @@
+.header {
+  padding: 2em var(--margins);
+
+  background-image: url("../../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: top;
+  height: calc(100vw * 1.42);
+  color: #fff;
+
+  .logo {
+    max-height: 24px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: start;
+    margin-bottom: 7em;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
+  .nav__link {
+    transition: color 125ms;
+  }
+
+  .nav__link:hover {
+    cursor: pointer;
+    color: #24303e;
+  }
+
+  .icon-menu {
+    cursor: pointer;
+  }
+
+  .header__title {
+    grid-row: 2;
+    position: relative;
+  }
+
+  .header__title::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../images/icon-arrow-down.svg");
+    background-size: cover;
+    width: 36px;
+    height: 114px;
+    top: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .modal {
+    position: fixed;
+    font-size: 1.25rem;
+    background-color: #fff;
+    color: #808397;
+    top: 6em;
+    left: calc(var(--margins) - 0.3125em);
+    right: calc(var(--margins) - 0.3125em);
+    padding-top: 2em;
+    padding-bottom: 1em;
+    z-index: 1;
+    text-align: center;
+    transform: scale(0);
+    transition: 250ms;
+    transition-property: transform, opacity;
+    opacity: 0;
+
+    .btn {
+      margin-left: 0;
+      background-color: #fbd600;
+    }
+  }
+
+  .modal::before,
+  .modal::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 2em;
+    width: 2em;
+  }
+
+  .modal::before {
+    right: -1em;
+    top: -1em;
+    transform: rotate(45deg);
+  }
+
+  .modal::after {
+    background-color: #3ebfff;
+    height: 5em;
+    right: -2em;
+    top: -2em;
+  }
+
+  .modal__item {
+    margin-bottom: 1.5em;
+  }
+
+  .modal__item:nth-child(4) {
+    margin-top: 2.5em;
+  }
+
+  .modal-display {
+    transform: scale(1);
+    transform-origin: right top;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 48em) {
+  .header {
+    padding-top: 4em;
+    background-image: url("../../images/desktop/image-header.jpg");
+    height: calc(100vw * 0.55);
+    max-height: 100vh;
+
+    .icon-menu {
+      display: none;
+    }
+
+    .nav {
+      margin-bottom: 10em;
+    }
+
+    .nav__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
+    }
+
+    .nav__list > * + * {
+      margin-left: 1.5rem;
+    }
+
+    .nav__link {
+      font-size: 1.125rem;
+    }
+
+    .header__title::after {
+      top: 2.5em;
+    }
+  }
+}

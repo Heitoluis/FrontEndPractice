@@ -1,0 +1,22 @@
+html {
+  --primary-clr-400: #5175ff;
+  --primary-clr-100: rgba(81, 117, 255, 15%);
+  --primary-neutral-400: #333950;
+  --primary-neutral-500: #25293a;
+
+  --border-radius: 15px;
+  --margins: 1.5em;
+}
+
+
+@media (min-width: 48em) {
+  html {
+    --margins: 3em;
+  }
+}
+
+@media (min-width: 90em) {
+  html {
+    --margins: 10.3125em;
+  }
+}

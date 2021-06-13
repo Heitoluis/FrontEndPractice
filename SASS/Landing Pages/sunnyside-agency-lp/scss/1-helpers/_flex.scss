@@ -1,0 +1,17 @@
+@mixin flex-h-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin main-grid($margin, $width) {
+  display: grid;
+  grid-template-columns: minmax($margin, 1fr) minmax(0, $width) minmax(
+      $margin,
+      1fr
+    );
+
+  > * {
+    grid-column: 2 / -2;
+  }
+}

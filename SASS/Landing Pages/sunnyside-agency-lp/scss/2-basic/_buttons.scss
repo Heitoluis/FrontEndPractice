@@ -1,0 +1,17 @@
+.btn {
+  font-family: "Fraunces", serif;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  margin-left: 1em;
+  color: #24303e;
+  background-color: #ffffff;
+  padding: 1em 2em;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255,25%);
+  color: #fff;
+}
+

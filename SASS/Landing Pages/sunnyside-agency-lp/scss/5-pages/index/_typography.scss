@@ -1,0 +1,60 @@
+.header__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.square__title {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.square__body {
+  font-size: 1.125rem;
+  color: #808397;
+}
+
+.testimonials__title {
+  color: #a7aaad;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 4em;
+}
+
+.testimonial__client {
+  margin-bottom: 5em;
+}
+
+.testimonial__body {
+  font-size: 1.125rem;
+  color: #5b636d;
+  margin-bottom: 1.5em;
+}
+
+.client__name {
+  font-family: "Fraunces", serif;
+  font-size: 1.125rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.client__position {
+  font-size: 0.875rem;
+  color: #a7aaad;
+  margin: 0;
+}
+
+@media (min-width: 60em) {
+  .header__title {
+    font-size: 3.5rem;
+  }
+
+  .square__title {
+    font-size: 2.5rem;
+  }
+
+  .testimonials__title {
+    font-size: 1.25rem;
+  }
+}
